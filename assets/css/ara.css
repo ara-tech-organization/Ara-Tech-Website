@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "Poppins", sans-serif;
+	src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+:root {
+    --ara-font-heading: "Poppins", sans-serif;
+    --ara-font-paragraph: "Poppins", sans-serif;
+    --ara-border-radius: 5px;
+    --ara-border-radius-sm: 3px;
+    --ara-border-radius-lg: 10px;
+    --ara-border-radius-xl: 15px;
+    --ara-border-radius-xxl: 20px;
+    --ara-primary-color: #ED2024;
+    --ara-secondary-color: #6c757d;
+    --ara-light-color: #f8f9fa;
+    --ara-dark-color: #343a40;
+    --ara-text-color: #333;
+    --ara-bg-color: #f8f9fa;
+    --ara-padding: 10px;
+    --ara-margin: 10px;
+    --ara-gap: 10px;
+  }
+  
+  /* ============================= */
+  /*          RESET STYLES         */
+  /* ============================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ara-font-paragraph);
+  }
+  
+
+  
+  /* ============================= */
+  /*         TYPOGRAPHY            */
+  /* ============================= */
+  .ara-text-center { text-align: center; }
+  .ara-text-left { text-align: left; }
+  .ara-text-right { text-align: right; }
+  .ara-fw-bold { font-weight: bold; }
+  .ara-fw-semi-bold {font-weight: 600;}
+  .ara-fw-light { font-weight: 300; }
+  .ara-uppercase { text-transform: uppercase; }
+  .ara-lowercase { text-transform: lowercase; }
+  .ara-capitalize { text-transform: capitalize; }
+  .ara-line-height-1 { line-height: 1; }
+  .ara-line-height-1-5 { line-height: 1.5; }
+  .ara-letter-spacing { letter-spacing: 1px; }
+  
+  /* ============================= */
+  /*         COLORS & BACKGROUND   */
+  /* ============================= */
+  .ara-text-primary { color: var(--ara-primary-color); }
+  .ara-text-secondary { color: var(--ara-secondary-color); }
+  .ara-text-info { color: var(--ara-info-color); }
+  .ara-text-light { color: var(--ara-light-color); }
+  .ara-text-dark { color: var(--ara-dark-color); }
+  .ara-text-white { color: white; }
+  .ara-text-black { color: black; }
+  
+  .ara-bg-primary { background-color: var(--ara-primary-color); color: white; }
+  .ara-bg-secondary { background-color: var(--ara-secondary-color); color: white; }
+  
+  
+  
