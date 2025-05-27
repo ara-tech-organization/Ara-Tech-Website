@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/tab.css" />
+    <link rel="stylesheet" href="assets/css/ara.css" />
+
+    <!-- ================ BOOTSTRAP CSS =================  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Ara Technologies</title>
+
+    <!-- ================ AOS Library ===================  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .hero-contact {
+        position: relative;
+        margin-top: 50px;
+        overflow: visible;
+        /* height: 100vh; */
+      }
+      .hero-top {
+        width: 100%;
+        height: 70vh;
+        background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+      }
+      .hero-top .inner {
+        max-width: 800px;
+        margin-top: 100px;
+      }
+
+      .hero-top h1 {
+        font-size: 3rem;
+
+        margin-bottom: 0.5rem;
+        color: #f30000;
+      }
+      .hero-top h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: #111;
+      }
+      .hero-top p {
+        /* margin-top: 50px; */
+        font-size: 1.125rem;
+        color: #555;
+      }
+
+      /* —— FLOATING CARDS —— */
+      .hero-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        width: 100%;
+        pointer-events: none;
+        /* height: 50vh; */
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0 1rem;
+        pointer-events: auto;
+        margin-top: 100px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+        padding: 2rem 1.5rem;
+        flex: 1 1 260px;
+        max-width: 380px;
+        text-align: center;
+        position: relative;
+        top: -2rem;
+        z-index: 10;
+      }
+      .card i {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+      .card i.red {
+        color: #ff0000;
+      }
+      .card i.green {
+        color: #ff0000;
+      }
+
+      .card h3 {
+        font-size: 19px;
+        margin-top: 1rem;
+        /* margin-bottom: 1.5rem; */
+        color: #111;
+        font-weight: 700;
+      }
+
+      .card h4 span {
+        color: rgb(0, 0, 0);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .card p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.4;
+      }
+      .card a {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1d3557;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
+
+      /* —— RESPONSIVE NUDGE —— */
+      @media (max-width: 768px) {
+        .hero-top {
+          height: 70vh;
+        }
+        .hero-top .inner {
+          margin-top: 90px !important;
+        }
+        .hero-top h1 {
+          font-size: 2.5rem;
+        }
+        .hero-top h2 {
+          font-size: 1.75rem;
+        }
+        .card-container {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 480px;
+        }
+        .card {
+          width: 100%;
+          max-width: 400px;
+          top: -1rem;
+        }
+        .hero-contact {
+          padding-bottom: 480px;
+          .hero-bottom {
+            transform: translateX(-50%) translateY(30%);
+          }
+        }
+      }
+
+      /* -------------------------Contact Form and Map section ------------------------------------ */
+
+      .contact-section {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 2rem;
+        padding: 4rem 1rem;
+        max-width: 1200px;
+        margin: 0rem auto;
+        margin-top: 200px;
+      }
+
+      .map-container,
+      .message-container {
+        flex: 1 1 0;
+        max-width: 600px;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 480px;
+        border: none;
+        border-radius: 1rem;
+      }
+
+      /* Message side */
+      .message-container h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        color: #ff0000;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .demo-form-clean {
+        flex: 1;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .gradient-heading {
+        text-align: center;
+        font-weight: 700;
+        font-size: 25px;
+        background: linear-gradient(90deg, #fd3b3b 0%, #7331cf 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 25px;
+      }
+
+      .demo-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .demo-form .form-control {
+        padding: 12px;
+        font-size: 14px;
+        border: 1.5px solid #bbb;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+      }
+
+      .demo-form .form-control:focus {
+        border-color: #fd3b3b;
+        outline: none;
+        box-shadow: 0 0 4px rgba(253, 59, 59, 0.3);
+      }
+
+      .demo-form .btn-demo {
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px;
+        font-weight: bold;
+        margin-top: 15px;
+        transition: background 0.3s ease;
+        width: 100%;
+      }
+
+      .message-box {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 1rem;
+        height: 400px;
+        position: relative;
+        padding: 1.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+      }
+
+      .hint {
+        position: absolute;
+        bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        color: #111;
+      }
+
+      @media (max-width: 1144px) {
+        .hero-top {
+          height: 70vh;
+        }
+        .hero-top .inner {
+          margin-top: 90px !important;
+        }
+        .card-container {
+          margin-top: 150px;
+        }
+        .hero-top h2 {
+          font-size: 1.5rem;
+        }
+        .hero-top p {
+          font-size: 15px;
+        }
+        .card-container .card h3 {
+          font-size: 15px;
+        }
+
+        .card-container .card p {
+          font-size: 15px;
+        }
+        .card-container .card h4 {
+          font-size: 12px;
+        }
+        .inner {
+          margin-top: 0 !important;
+        }
+      }
+
+      /* Responsive tweak */
+      @media (max-width: 768px) {
+        .contact-section {
+          flex-direction: column;
+          margin-top: 350px;
+          padding: 2rem 1rem;
+        }
+        .map-container,
+        .message-container {
+          max-width: none;
+          flex: none;
+          width: 100%;
+        }
+
+        .message-container p {
+          font-size: 10px;
+          text-align: start;
+        }
+      }
+      .contact-think-section {
+        margin: 3rem 0 0 0;
+        background-color: #fbf3e8;
+        padding: 4rem 1.5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inner {
+        margin-top: 100px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem; /* default for <576px */
+      }
+
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+          line-height: 40px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .hero-content h1 {
+          font-size: 2.4rem;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .hero-content h1 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .hero-content h1 {
+          font-size: 3rem;
+          line-height: 65px;
+        }
+      }
+      @media (max-width: 575px) {
+        .hero-content h1 {
+          font-size: 2rem;
+          line-height: 45px;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-sections {
+          height: 70vh;
+        }
+
+        .hero-content p {
+          font-size: 15px;
+          line-height: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header ara--header">
+      <nav class="nav ara--nav container">
+        <div class="nav__data ara--nav-content">
+          <a href="index.html" class="ara--nav-logo">
+            <img
+              src="assets/img/Ara Tech Logo.png"
+              class="img-fluid ms-3"
+              alt="Ara Tech Logo"
+            />
+          </a>
+
+          <!-- Responsive Buttons -->
+          <div class="nav__toggle ara--nav-toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__toggle-menu ara--nav-toggle-menu"></i>
+            <i
+              class="ri-close-line nav__toggle-close ara--nav-toggle-close"
+            ></i>
+          </div>
+          <div class="nav-search-two">
+            <a href="#" class="nav__link">
+              <i class="ri-search-line icon-search" id="icon-search"></i>
+            </a>
+            <div class="box-2">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search for product overviews and more..."
+              />
+              <i class="ri-close-line" id="close"></i>
+              <i class="ri-search-line" id="icon-2"></i>
+            </div>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu ara--nav-menu" id="nav-menu">
+          <ul class="nav__list ara--nav-list">
+            <li>
+              <a href="index.html" class="nav__link ara--nav-link active"
+                >Home</a
+              >
+            </li>
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item ara--nav-dropdown-item">
+              <div
+                class="ara--nav-link dropdown__button ara--nav-dropdown-button"
+              >
+                Solutions
+                <i
+                  class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"
+                ></i>
+              </div>
+              <div class="dropdown__container ara--nav-dropdown-container">
+                <div class="dropdown-left">
+                  <div class="dropdown__content ara--nav-dropdown-content">
+                    <div class="dropdown__group ara--nav-dropdown-group">
+                      <div class="dropdown__icon ara--nav-dropdown-icon">
+                        <i class="ri-graduation-cap-fill"></i>
+                      </div>
+                      <span class="dropdown__title ara--nav-dropdown-title"
+                        >Education</span
+                      >
+                      <ul class="dropdown__list ara--nav-dropdown-list">
+                        <li>
+                          <a
+                            href="#"
+                            class="dropdown__link ara--nav-dropdown-link"
+                            >Schoolmate</a
+                          >
+                        </li>
+                        <!-- <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
+                                 </li> -->
+                      </ul>
+                    </div>
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                              <div class="dropdown__icon ara--nav-dropdown-icon">
+                                 <i class="ri-price-tag-3-line"></i>
+                              </div>
+                              <span class="dropdown__title ara--nav-dropdown-title">Retail</span>
+                              <ul class="dropdown__list ara--nav-dropdown-list">
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
+                                 </li>
+                              </ul>
+                           </div> -->
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                              <div class="dropdown__icon ara--nav-dropdown-icon">
+                                 <i class="ri-bar-chart-2-line"></i>
+                              </div>
+                              <span class="dropdown__title ara--nav-dropdown-title">Travel</span>
+                              <ul class="dropdown__list ara--nav-dropdown-list">
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
+                                 </li>
+                              </ul>
+                           </div> -->
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                              <div class="dropdown__icon ara--nav-dropdown-icon">
+                                 <i class="ri-macbook-fill"></i>
+                              </div>
+                              <span class="dropdown__title ara--nav-dropdown-title">IT Services</span>
+                              <ul class="dropdown__list ara--nav-dropdown-list">
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
+                                 </li>
+                              </ul>
+                           </div> -->
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                              <div class="dropdown__icon ara--nav-dropdown-icon">
+                                 <i class="ri-signal-tower-fill"></i>
+                              </div>
+                              <span class="dropdown__title ara--nav-dropdown-title">Telecommunication</span>
+                              <ul class="dropdown__list ara--nav-dropdown-list">
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
+                                 </li>
+                              </ul>
+                           </div> -->
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                              <div class="dropdown__icon ara--nav-dropdown-icon">
+                                 <i class="ri-government-line"></i>
+                              </div>
+                              <span class="dropdown__title ara--nav-dropdown-title">Government</span>
+                              <ul class="dropdown__list ara--nav-dropdown-list">
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
+                                 </li>
+                              </ul>
+                           </div> -->
+                  </div>
+                </div>
+                <div class="dropdown-right">
+                  <div class="right__content">
+                    <div class="team__group">
+                      <h6 class="ara-fw-semi-bold">Teams</h6>
+                      <div class="group-icon">
+                        <a href="" class="icon-link">
+                          <i class="ri-customer-service-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Customer Support</span
+                          >
+                        </a>
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link">
+                          <i class="ri-checkbox-line"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >IT Support</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Human Resources</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Facilities</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Marketing</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title">Sales</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="about.html" class="ara--nav-link">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="ara--nav-link">Organization</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="ara--nav-link">Contact Us</a>
+            </li>
+
+            <!-- <li>
+                     <a href="#" class="ara--nav-link"> <i class="ri-more-line"></i> </a>
+                  </li> -->
+
+            <!-- Responsive button -->
+            <li class="nav__responsive-demo ara--nav-responsive-demo">
+              <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+            </li>
+          </ul>
+
+          <!-- Search Section -->
+          <div class="search-content">
+            <input
+              type="search"
+              id="search-box"
+              placeholder="Search for product overviews and more..."
+            />
+            <i class="ri-close-line close-btn" id="close-btn"></i>
+            <i class="ri-search-line" id="search-2"></i>
+          </div>
+        </div>
+        <div class="ara--nav-content nav__desk__button ara--nav-desk-button">
+          <a href="#" class="nav__link nav-search">
+            <i class="ri-search-line" id="search-icon"></i>
+          </a>
+          <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+        </div>
+      </nav>
+    </header>
+    <!--=============== HEADER END ===============-->
+
+    <section class="hero-contact">
+      <!-- Top: Full-screen poetic call -->
+      <div class="hero-top">
+        <div class="inner">
+          <h2>Have an Idea?</h2>
+          <h2>Let’s Build It Together.</h2>
+          <p class="mt-4">
+            Whether you need a school management solution, a custom mobile app,
+            or an entire ERP system — we’re here to help. Connect with our team
+            to schedule a free consultation or request a product demo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom: Cards floating at horizon’s edge -->
+      <div class="hero-bottom">
+        <div class="card-container">
+          <!-- Card 1: Location -->
+          <div class="card">
+            <i class="fas fa-map-marker-alt red"></i>
+            <h3>ARA Discover Technologies Pvt. Ltd.</h3>
+            <p class="mt-3">
+              67A, Giri Rd, Srinivasapuram,<br />
+              Balaganapathy Nagar, Thanjavur,<br />
+              Tamil Nadu 613009
+            </p>
+          </div>
+
+          <!-- Card 2: Email & Hours -->
+          <div class="card">
+            <i class="fas fa-envelope red"></i>
+            <h3>+91 81100 15152</h3>
+            <h4><span>(Monday – Saturday, 9 AM – 7 PM)</span></h4>
+            <!-- <h4><span>support@schoolmate.in</span></h4> -->
+          </div>
+
+          <!-- Card 3: WhatsApp -->
+          <div class="card">
+            <i class="fab fa-whatsapp green"></i>
+            <h3>WhatsApp Chat:</h3>
+            <a href="https://wa.me/918110015152" target="_blank">
+              Click here to start chat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <!-- Left: Message Form -->
+      <div class="message-container">
+        <div class="demo-form-clean">
+          <h3 class="gradient-heading">Contact Us Today</h3>
+          <form id="brochureForm" class="demo-form">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Full Name*"
+              required
+            />
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="Mobile Number*"
+              required
+            />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email Address*"
+              required
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="School/Institution Name*"
+              required
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="School/Institution Address*"
+              required
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="City*"
+              required
+            />
+            <div class="text-center">
+              <button type="submit" class="btn-demo">Download Brochure</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right: Google Map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.341292788555!2d79.12459417480503!3d10.78515098936415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab986fba40a6b%3A0xc60663bc6b08e04e!2sARA%20Discoveries%20Pvt%20Ltd%20%E2%80%93%20IT%20Solutions%20%26%20Digital%20Marketing%20Company!5e0!3m2!1sen!2sin!4v1748263054458!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- ============== SECTION JOURNEY START ================ -->
+    <section
+      class="section-journey"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1000"
+    >
+      <h6 class="text-center ara-fw-semi-bold">Explore Our Journey</h6>
+      <div class="container">
+        <div class="row">
+          <div class="mt-4 d-flex flex-wrap justify-content-center text-center">
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark linkedin">
+                LinkedIn</a
+              >
+            </h4>
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark instagram">
+                Instagram</a
+              >
+            </h4>
+            <h4><a href="" class="ara-fw-semi-bold text-dark"> Youtube</a></h4>
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark dribble"> Dribble</a>
+            </h4>
+            <h4><a href="" class="ara-fw-semi-bold text-dark X"> X</a></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= SECTION JOURNEY END  ===================-->
+
+    <!-- ================ SECTION FOOTER START ============= -->
+    <section class="section-footer container-fluid">
+      <div class="container p-5">
+        <div class="row mx-auto my-auto g-4 justify-content-lg-evenly">
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Products</h4>
+            <a href="">Schoolmate</a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Quick Links</h4>
+            <a href="">About Us</a> <br />
+            <a href="">Solutions</a> <br />
+            <a href="">Contact Us</a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Support</h4>
+            <a href="">Help Center</a> <br />
+            <a href="">FAQs</a> <br />
+            <a href="">User Guides</a> <br />
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Legel</h4>
+            <a href="">Privacy Policy </a> <br />
+            <a href="">Terms & Conditions</a> <br />
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Contact Us</h4>
+            <a href="">Email</a> <br />
+            <a href="">Phone</a> <br />
+            <a href="">Address</a> <br />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= COPYRIGHT START ======== -->
+    <div
+      class="d-flex justify-content-center align-items-center w-100 copyright"
+    >
+      <h6>
+        © 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.
+      </h6>
+    </div>
+    <!-- ========= COPYRIGHT END ======== -->
+    <!--=========== SECTION FOOTER END ============= -->
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ============ BOOTSTRAP JS =========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========= AOS Library =========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

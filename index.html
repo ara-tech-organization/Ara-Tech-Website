@@ -1,96 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-      rel="stylesheet" />
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css" />
-      <link rel="stylesheet" href="assets/css/responsive.css" />
-      <link rel="stylesheet" href="assets/css/tab.css" />
-      <link rel="stylesheet" href="assets/css/ara.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/tab.css" />
+    <link rel="stylesheet" href="assets/css/ara.css" />
 
-      <!-- ================ BOOTSTRAP CSS =================  -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ================ BOOTSTRAP CSS =================  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-      <title>Ara Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-      <!-- ================ AOS Library ===================  -->
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Ara Technologies</title>
 
+    <!-- ================ AOS Library ===================  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        /* font-family: 'Segoe UI', sans-serif; */
+        background-color: #fdfbf8;
+        overflow-x: hidden !important;
+        color: #333;
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 12% 20px;
+        position: relative;
+        margin-top: 90px;
+        background: linear-gradient(
+          90deg,
+          rgba(155, 0, 3, 0.02) 0%,
+          rgba(255, 0, 0, 0.02) 100%
+        );
+      }
 
-   </head>
-   <body>
+      .blue-heart,
+      .red-heart {
+        position: absolute;
+        width: 60px;
+      }
 
-      <!--========== PRELOADER START ==============-->
-      <!-- <div id="preloader">
+      .blue-heart {
+        top: 200px;
+        left: 250px;
+      }
+
+      .red-heart {
+        bottom: 200px;
+        right: 250px;
+      }
+
+      .title {
+        font-size: 2rem;
+        font-weight: bold;
+        background: linear-gradient(90deg, #9b0003 0%, #ff0000 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; /* For some modern non-webkit browsers */
+        color: transparent;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        font-size: 1rem;
+        max-width: 700px;
+        color: #555;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .form-container input {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+      }
+
+      .form-container button {
+        padding: 12px 20px;
+        background-color: #e3342f;
+        color: #fff;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #cc1f1a;
+      }
+
+      /* Responsive Breakpoints */
+      @media (max-width: 575.98px) {
+        .blue-heart,
+        .red-heart {
+          display: none;
+        }
+
+        .title {
+          font-size: 1.5rem;
+        }
+
+        .form-container {
+          flex-direction: column;
+        }
+
+        .form-container input,
+        .form-container button {
+          width: 100%;
+          border-radius: 4px;
+          margin: 5px 0;
+        }
+      }
+
+      @media (min-width: 575.98px) and (max-width: 768px) {
+        .blue-heart {
+          left: 20px;
+          width: 45px;
+          top: 100px;
+        }
+
+        .red-heart {
+          right: 20px;
+          width: 45px;
+          bottom: 100px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .title {
+          font-size: 2.2rem;
+        }
+
+        .blue-heart {
+          top: 50px;
+          left: 70px;
+          width: 50px;
+        }
+
+        .red-heart {
+          bottom: 30px;
+          right: 70px;
+          width: 50px;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .title {
+          font-size: 2.5rem;
+        }
+
+        .blue-heart {
+          top: 100px;
+          left: 100px;
+          width: 50px;
+        }
+
+        .red-heart {
+          bottom: 100px;
+          right: 100px;
+          width: 50px;
+        }
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399.98px) {
+        .title {
+          font-size: 2.8rem;
+        }
+
+        .blue-heart {
+          top: 150px;
+          left: 250px;
+          width: 50px;
+        }
+
+        .red-heart {
+          bottom: 150px;
+          right: 250px;
+          width: 50px;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .title {
+          font-size: 3rem;
+        }
+      }
+
+      /*--------------------------------- IFrame starts --------------------------------*/
+
+      .video-section {
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      .video-heading {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .video-thumbnail-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .video-thumbnail-img {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 2;
+        transition: transform 0.3s ease;
+      }
+
+      .play-button:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      .video-embed {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 16/9;
+        height: auto;
+      }
+
+      .video-embed iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      @media (max-width: 575.98px) {
+        .video-heading {
+          font-size: 1.4rem;
+        }
+
+        .play-button svg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .video-heading {
+          font-size: 2rem;
+        }
+
+        .play-button svg {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .video-heading {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399.98px) {
+        .video-heading {
+          font-size: 2.4rem;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .video-heading {
+          font-size: 2.6rem;
+        }
+      }
+      /* ---------------------------IFrame Ends-------------------------------------------------------- */
+      /* ---------------------------Green content------------------------------------------------------ */
+      .section--green {
+        padding: 80px 0;
+        color: white;
+      }
+
+      .section--green p {
+        font-weight: 500;
+      }
+
+      .section-green-left {
+        padding: 20px;
+      }
+
+      .section-green-left .base-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .section-green-left .overlay-image {
+        position: absolute;
+        top: 42%; /* Adjust to fine-tune overlap */
+        left: 75%; /* Move it into the green content area */
+        width: 100%;
+        max-width: 200px;
+        /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
+        border-radius: 8px;
+        z-index: 2;
+      }
+
+      /* Optional: fade-in or animation if needed */
+      .overlay-image {
+        /* animation: fadeInUp 1s ease; */
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .section--green__right__para {
+          padding: 0 !important;
+        }
+
+        .ara-fw-bold.ms-4 {
+          margin-left: 0 !important;
+        }
+
+        .section-green-right {
+          padding: 10px !important;
+        }
+
+        .section-green-left .overlay-image {
+          position: absolute;
+          top: 42%; /* Adjust to fine-tune overlap */
+          left: 75%; /* Move it into the green content area */
+          width: 100%;
+          max-width: 110px;
+          /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
+          border-radius: 8px;
+          z-index: 2;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .section-green-right {
+          padding: 10px !important;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .overlay-image {
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%);
+          width: 60%;
+          position: relative;
+          margin-top: 20px;
+        }
+
+        .section-green-left {
+          text-align: center;
+        }
+      }
+
+      /* ----------------------------------Green Content Ends ----------------------------------------- */
+
+      /* ---------------------------------   Card Carousel ----------------------------------------------- */
+
+      section.carousel-section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+        position: relative;
+      }
+      .carousel-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .arrow {
+        background: #eee;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.2rem;
+        z-index: 2;
+      }
+      .arrow.left {
+        position: absolute;
+        left: -30px;
+      }
+      .arrow.right {
+        position: absolute;
+        right: -30px;
+      }
+      .carousel {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        width: 100%;
+        scroll-snap-type: x mandatory; /* Snap horizontally */
+      }
+      .carousel-card {
+        flex: 0 0 auto;
+        background: #fff8f0;
+        border: 1px solid #ffc966;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 0 10px;
+        text-align: center;
+        width: calc(100% / 3 - 20px);
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-align: start; /* Each card snaps to start */
+      }
+
+      .carousel-card:nth-child(2),
+      .carousel-card:nth-child(3) {
+        background: #ea2c0008;
+        border: 1px solid #ea2c00;
+      }
+
+      .carousel-card:nth-child(4) {
+        background: #5fb2ff08;
+        border: 1px solid #5fb2ff;
+      }
+
+      .carousel-card:nth-child(5) {
+        background: #00990508;
+        border: 0.6px solid #009905;
+      }
+
+      .card-icon {
+        width: 32px; /* icon size */
+        height: 32px;
+        object-fit: contain;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+
+      .carousel-card h3 {
+        font-size: 1.1rem;
+        color: #000;
+        margin-bottom: 10px;
+      }
+
+      .carousel-card:nth-child(1) h3 {
+        font-size: 1.1rem;
+        color: #ffaa22;
+        margin-bottom: 10px;
+      }
+
+      .carousel-card p {
+        font-size: 0.95rem;
+      }
+      .counter {
+        text-align: right;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        color: #fff;
+        background: #000;
+        padding: 5px 10px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+
+      @media (max-width: 575px) {
+        .carousel-card {
+          width: 100%;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 767px) {
+        .carousel-card {
+          width: 100%;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .carousel-card {
+          width: 45%;
+        }
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .carousel-card {
+          width: 30%;
+        }
+      }
+      @media (min-width: 1200px) {
+        .carousel-card {
+          width: calc(100% / 3 - 20px);
+        }
+      }
+
+      /* ---------------------------------------  Card Carousel --------------------------------------- */
+      /*  --------------------------------------   Tab Starts ------------------------------------------- */
+
+      .content-switcher-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .left-content {
+        flex: 1 1 45%;
+      }
+
+      .left-content h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        line-height: 50px;
+      }
+
+      .left-content strong {
+        font-weight: 800;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .nav-buttons button {
+        background: #f5f5f5;
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .right-content {
+        flex: 1 1 45%;
+        background: #fff8f0;
+        padding: 30px 60px;
+        border-radius: 12px;
+        min-height: 220px;
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out;
+      }
+
+      .right-content h3 span {
+        color: #ff9900;
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: inline-block;
+        border-bottom: 2px solid #ff9900;
+        margin-bottom: 10px;
+      }
+
+      .right-content h3 span.red {
+        color: #ea2c00;
+        border-bottom: 2px solid #ea2c00;
+      }
+
+      .right-content h3 span.green {
+        color: #009905;
+        border-bottom: 2px solid #009905;
+      }
+
+      .right-content p {
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+
+      /* Responsive */
+      @media (max-width: 575px) {
+        .content-switcher-section {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .left-content,
+        .right-content {
+          flex: 1 1 100%;
+          padding: 10px;
+        }
+
+        .left-content h2 {
+          font-size: 1.5rem;
+          line-height: 35px;
+        }
+
+        .right-content {
+          padding: 20px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        .left-content h2 {
+          font-size: 1.8rem;
+        }
+
+        .right-content {
+          padding: 20px;
+        }
+      }
+
+      /* ----------------------------------------- Tab Ends ----------------------------------------- */
+      /*  --------------------------------------- Core Values -------------------------------------- */
+
+      .core-values-section {
+        text-align: center;
+        padding: 60px 20px;
+        background: #fffdfc;
+      }
+
+      .core-values-heading h2 {
+        font-size: 2.8rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .core-values-heading h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+
+      .core-values-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .value-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #fff9f6;
+        padding: 12px 16px;
+        border-radius: 12px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.03);
+        max-width: 240px;
+      }
+
+      .icon-circle {
+        background: #fff4f0;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon-circle img {
+        width: 35px;
+        height: 35px;
+      }
+
+      .value-item p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 0;
+        text-align: left;
+      }
+
+      /* Responsive breakpoints */
+
+      /* < 576px */
+      @media (max-width: 575px) {
+        .core-values-list {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      /* 768 - 991 */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .core-values-heading h2 {
+          font-size: 1.6rem;
+        }
+        .core-values-heading h3 {
+          font-size: 1.8rem;
+        }
+      }
+
+      /* 992 - 1199 */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .core-values-heading h2 {
+          font-size: 1.8rem;
+        }
+        .core-values-heading h3 {
+          font-size: 2rem;
+        }
+      }
+
+      /* 1200 - 1399 */
+      @media (min-width: 1200px) and (max-width: 1399px) {
+        .core-values-heading h2 {
+          font-size: 2rem;
+        }
+        .core-values-heading h3 {
+          font-size: 2.2rem;
+        }
+      }
+
+      /* ≥1400px */
+      @media (min-width: 1400px) {
+        .core-values-heading h2 {
+          font-size: 2.2rem;
+        }
+        .core-values-heading h3 {
+          font-size: 2.4rem;
+        }
+      }
+
+      /* ------------------------------------- Core Values Ends --------------------------------------- */
+      /*  --------------------------------------Video section ---------------------------------------- */
+
+      /* Wrapper styling */
+      .right-content {
+        position: relative;
+      }
+
+      .video-overlay-play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("./assets/img/play-circle-outline.png") no-repeat center
+          center;
+        background-size: 64px 64px;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        z-index: 10;
+        opacity: 0.9;
+        transition: transform 0.3s ease;
+      }
+
+      .video-overlay-play-button:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      @media (max-width: 575px) {
+        .privacy-container {
+          padding: 10px !important;
+        }
+      }
+
+      /*  -----------------------------------------------Video section Ends --------------------------------- */
+
+      /* -------------------------------------------------- Success Starts ------------------------------------ */
+
+      @media (max-width: 575.98px) {
+        .section--success .row {
+          padding: 0 !important;
+        }
+
+        .section--success h3,
+        .section--success p {
+          padding: 0 !important;
+        }
+      }
+
+      /* ------------------------------------------------ Success Ends -------------------------------------- */
+      /*  ------------------------------------------------ Service product starts ---------------------------- */
+      @media (max-width: 575.98px),
+        (min-width: 768px) and (max-width: 991.98px) {
+        .section--service .row {
+          padding: 0 !important;
+        }
+
+        .section--service h3,
+        .section--service p,
+        .section--service .service-link {
+          padding-top: 0 !important;
+        }
+      }
+
+      /*  --------------------------------------------------------Service Ends ------------------------------------------ */
+    </style>
+  </head>
+  <body>
+    <!--========== PRELOADER START ==============-->
+    <!-- <div id="preloader">
          <div class="loader"></div>
        </div> -->
-      <!--======== PRELOADER END ===========-->
+    <!--======== PRELOADER END ===========-->
 
+    <!--=============== HEADER ===============-->
+    <header class="header ara--header">
+      <nav class="nav ara--nav container">
+        <div class="nav__data ara--nav-content">
+          <a href="index.html" class="ara--nav-logo">
+            <img
+              src="assets/img/Ara Tech Logo.png"
+              class="img-fluid ms-3"
+              alt="Ara Tech Logo"
+            />
+          </a>
 
-      <!--=============== HEADER ===============-->
-      <header class="header ara--header">
-         <nav class="nav ara--nav container">
-            <div class="nav__data ara--nav-content">
-               <a href="index.html" class="ara--nav-logo">
-                  <img src="assets/img/Ara Tech Logo.png" class="img-fluid ms-3" alt="Ara Tech Logo">
-                </a>
-
-               <!-- Responsive Buttons -->
-               <div class="nav__toggle ara--nav-toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav__toggle-menu ara--nav-toggle-menu"></i>
-                  <i class="ri-close-line nav__toggle-close ara--nav-toggle-close"></i>
-               </div>
-               <div class="nav-search-two">
-                  <a href="#" class="nav__link"> <i class="ri-search-line icon-search" id="icon-search"></i> </a>
-                  <div class="box-2">
-                     <input type="search" id="search-input" placeholder="Search for product overviews and more...">
-                     <i class="ri-close-line" id="close"></i>
-                     <i class="ri-search-line" id="icon-2"></i>
-                  </div>
-
-               </div>
-
-
+          <!-- Responsive Buttons -->
+          <div class="nav__toggle ara--nav-toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__toggle-menu ara--nav-toggle-menu"></i>
+            <i
+              class="ri-close-line nav__toggle-close ara--nav-toggle-close"
+            ></i>
+          </div>
+          <div class="nav-search-two">
+            <a href="#" class="nav__link">
+              <i class="ri-search-line icon-search" id="icon-search"></i>
+            </a>
+            <div class="box-2">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search for product overviews and more..."
+              />
+              <i class="ri-close-line" id="close"></i>
+              <i class="ri-search-line" id="icon-2"></i>
             </div>
+          </div>
+        </div>
 
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu ara--nav-menu" id="nav-menu">
-               <ul class="nav__list ara--nav-list">
-                  <li>
-                     <a href="index.html" class="nav__link ara--nav-link active">Home</a>
-                  </li>
-                  <!--=============== DROPDOWN 1 ===============-->
-                  <li class="dropdown__item ara--nav-dropdown-item">
-                     <div class="ara--nav-link dropdown__button ara--nav-dropdown-button">
-                        Solutions <i class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"></i>
-                     </div>
-                     <div class="dropdown__container ara--nav-dropdown-container">
-                       <div class="dropdown-left">
-                        <div class="dropdown__content ara--nav-dropdown-content">
-                           <div class="dropdown__group ara--nav-dropdown-group">
-                              <div class="dropdown__icon ara--nav-dropdown-icon">
-                                 <i class="ri-graduation-cap-fill"></i>
-                              </div>
-                              <span class="dropdown__title ara--nav-dropdown-title">Education</span>
-                              <ul class="dropdown__list ara--nav-dropdown-list">
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Schoolmate</a>
-                                 </li>
-                                 <!-- <li>
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu ara--nav-menu" id="nav-menu">
+          <ul class="nav__list ara--nav-list">
+            <li>
+              <a href="index.html" class="nav__link ara--nav-link active"
+                >Home</a
+              >
+            </li>
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item ara--nav-dropdown-item">
+              <div
+                class="ara--nav-link dropdown__button ara--nav-dropdown-button"
+              >
+                Solutions
+                <i
+                  class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"
+                ></i>
+              </div>
+              <div class="dropdown__container ara--nav-dropdown-container">
+                <div class="dropdown-left">
+                  <div class="dropdown__content ara--nav-dropdown-content">
+                    <div class="dropdown__group ara--nav-dropdown-group">
+                      <div class="dropdown__icon ara--nav-dropdown-icon">
+                        <i class="ri-graduation-cap-fill"></i>
+                      </div>
+                      <span class="dropdown__title ara--nav-dropdown-title"
+                        >Education</span
+                      >
+                      <ul class="dropdown__list ara--nav-dropdown-list">
+                        <li>
+                          <a
+                            href="#"
+                            class="dropdown__link ara--nav-dropdown-link"
+                            >Schoolmate</a
+                          >
+                        </li>
+                        <!-- <li>
                                     <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
                                  </li>
                                  <li>
                                     <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
                                  </li> -->
-                              </ul>
-                           </div>
-                           <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                      </ul>
+                    </div>
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                               <div class="dropdown__icon ara--nav-dropdown-icon">
                                  <i class="ri-price-tag-3-line"></i>
                               </div>
@@ -107,7 +945,7 @@
                                  </li>
                               </ul>
                            </div> -->
-                           <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                               <div class="dropdown__icon ara--nav-dropdown-icon">
                                  <i class="ri-bar-chart-2-line"></i>
                               </div>
@@ -124,7 +962,7 @@
                                  </li>
                               </ul>
                            </div> -->
-                           <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                               <div class="dropdown__icon ara--nav-dropdown-icon">
                                  <i class="ri-macbook-fill"></i>
                               </div>
@@ -141,7 +979,7 @@
                                  </li>
                               </ul>
                            </div> -->
-                           <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                               <div class="dropdown__icon ara--nav-dropdown-icon">
                                  <i class="ri-signal-tower-fill"></i>
                               </div>
@@ -158,7 +996,7 @@
                                  </li>
                               </ul>
                            </div> -->
-                           <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                               <div class="dropdown__icon ara--nav-dropdown-icon">
                                  <i class="ri-government-line"></i>
                               </div>
@@ -175,975 +1013,1459 @@
                                  </li>
                               </ul>
                            </div> -->
+                  </div>
+                </div>
+                <div class="dropdown-right">
+                  <div class="right__content">
+                    <div class="team__group">
+                      <h6 class="ara-fw-semi-bold">Teams</h6>
+                      <div class="group-icon">
+                        <a href="" class="icon-link">
+                          <i class="ri-customer-service-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Customer Support</span
+                          >
+                        </a>
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link">
+                          <i class="ri-checkbox-line"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >IT Support</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Human Resources</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Facilities</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Marketing</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title">Sales</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="about2.html" class="ara--nav-link">About Us</a>
+            </li>
+            <li>
+              <a href="organisation.html" class="ara--nav-link">Organization</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="ara--nav-link">Contact Us</a>
+            </li>
 
-                        </div>
-                       </div>
-                       <div class="dropdown-right">
-                        <div class="right__content">
-                          <div class="team__group">
-                           <h6 class="ara-fw-semi-bold">Teams</h6>
-                           <div class="group-icon">
-                              <a href="" class="icon-link">
-                                 <i class="ri-customer-service-fill"></i>
-                              <span class="ara--nav-dropdown-title">Customer Support</span>
-                              </a>
-                           </div>
-                           <div class="group-icon">
-                              <a href="" class="icon-link">
-                                 <i class="ri-checkbox-line"></i>
-                                 <span class="ara--nav-dropdown-title">IT Support</span></a>
-                           </div>
-                           <div class="group-icon">
-                              <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                                 <span class="ara--nav-dropdown-title">Human Resources</span></a>
-                           </div>
-                           <div class="group-icon">
-                              <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                                 <span class="ara--nav-dropdown-title">Facilities</span></a>
-                           </div>
-                           <div class="group-icon">
-                              <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                                 <span class="ara--nav-dropdown-title">Marketing</span></a>
-                           </div>
-                           <div class="group-icon">
-                              <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                                 <span class="ara--nav-dropdown-title">Sales</span></a>
-                           </div>
-                          </div>
-                        </div>
-                       </div>
-                     </div>
-                  </li>
-                  <li>
-                     <a href="#" class="ara--nav-link">Customers</a>
-                  </li>
-                  <li>
-                     <a href="about.html" class="ara--nav-link">About Us</a>
-                  </li>
-                  <li>
+            <!-- <li>
                      <a href="#" class="ara--nav-link"> <i class="ri-more-line"></i> </a>
-                  </li>
+                  </li> -->
 
-                  <!-- Responsive button -->
-                  <li class="nav__responsive-demo ara--nav-responsive-demo">
-                     <a href="#" class="nav__button ara--nav-button">Get a demo</a>
-                  </li>
-               </ul>
+            <!-- Responsive button -->
+            <li class="nav__responsive-demo ara--nav-responsive-demo">
+              <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+            </li>
+          </ul>
 
-                 <!-- Search Section -->
-                 <div class="search-content">
-                  <input type="search" id="search-box" placeholder="Search for product overviews and more...">
-                  <i class="ri-close-line close-btn" id="close-btn"></i>
-                  <i class="ri-search-line" id="search-2"></i>
-               </div>
-
-            </div>
-            <div class="ara--nav-content nav__desk__button ara--nav-desk-button">
-               <a href="#" class="nav__link nav-search"> <i class="ri-search-line" id="search-icon"></i> </a>
-               <a href="#" class="nav__button ara--nav-button">Get a demo</a>
-            </div>
-
-
-         </nav>
-      </header>
-        <!--=============== HEADER END ===============-->
-
-
-      <!-- === SECTION HERO START ===  -->
-       <section class="section--hero">
-         <div class="container">
-            <div class="row mx-auto g-5">
-               <div class="col-lg-6 col-12"
-                 data-aos="fade-up"
-                  data-aos-duration="1000">
-                  <h1 class="ara-fw-semi-bold ara-line-height-1-5 pt-5 mt-4">
-                     Transforming Digital <br> Experiences with Cutting- <br> Edge Solutions
-                  </h1>
-                  <p class="section--hero__left__para ara-line-height-1-5">
-                     Empowering businesses with innovative software solutions <br>  that streamline operations, enhance communication, and <br> drive success.
-                  </p>
-                  <div class="section--hero__input__container">
-                     <input
-                        class="section--hero__left__input"
-                        type="text" placeholder="Enter your Work Email"
-                        />
-                     <a href="#" class="section--hero__left__button">
-                     Get a demo
-                     </a>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-12">
-                  <img src="assets/img/hero.png" class="img-fluid pt-5 mt-4" alt="">
-
-               </div>
-
-            </div>
-
-         </div>
-
-       </section>
-      <!-- === SECTION HERO END ===  -->
-
-
-      <!-- === SECTION IFRAME START ===  -->
-       <section class="section--iframe">
-         <div class="container mx-auto">
-            <h3 class="text-center fw-500">Watch How It Works</h3>
-            <div class="custom-ratio">
-               <iframe
-                   src="https://www.youtube.com/embed/pSKualsVCFg"
-                   title="YouTube video"
-                   allowfullscreen>
-               </iframe>
-           </div>
-
-         </div>
-       </section>
-
-      <!-- === SECTION IFRAME END ===  -->
-
-      <!-- === SECTION GREEN START ===  -->
-      <section class="section--green">
-         <div class="container mx-auto">
-            <div class="row mx-auto">
-               <div class="col-lg-6 col-12 section-green-left order-2 order-lg-1">
-                  <img src="assets/img/Videos/Animated GIF.gif" class="img-fluid" alt="">
-               </div>
-               <div class="col-lg-6 col-12 section-green-right order-1 order-lg-2"
-                  >
-                 <div data-aos="fade-up"
-                 data-aos-duration="1500">
-                  <h3 class="ara-fw-bold ara-line-height-1-5 ms-4">
-                     Design. Code. Conquer – <br> Apps & Software that <br> Redefine Possibilities
-                  </h3>
-                  <p class="section--green__right__para ara-line-height-1-5 ms-4">
-                     We don’t just build software—we craft exceptional <br>
-                      digital experiences. From intuitive UI/UX design to <br>
-                      scalable software solutions, we engineer tools that <br>
-                       empower businesses to thrive in an ever-evolving  <br>
-                       digital landscape.
-                  </p>
-                 </div>
-               </div>
-
-            </div>
-
-         </div>
-
-      </section>
-      <!-- === SECTION GREEN END ===========  -->
-
-
-
-      <!-- ===== SECTION CORE START ============ -->
-       <section class="section--core">
-         <h1 class="text-center ara-fw-semi-bold">Our Core Capabilities</h1>
-         <div class="container">
-            <div class="row mx-auto my-auto">
-               <div class="slider-container">
-                  <div class="slider-dots">
-                     <span class="dot active" data-slide="0"></span>
-                     <span class="dot" data-slide="1"></span>
-                     <span class="dot" data-slide="2"></span>
-                  </div>
-                  <div class="slide active">
-                      <div class="d-flex p-3 software">
-                          <img src="assets/img/code.png" class="img-fluid h-75" alt="">
-                          <p class="mt-3"><span class="ara-fw-semi-bold">Custom Software Development -</span> Tailor-made solutions that align with your business needs.</p>
-                      </div>
-                  </div>
-                  <div class="slide">
-                      <div class="d-flex p-3 ui-ux">
-                          <img src="assets/img/color.png" class="img-fluid h-75" alt="">
-                          <p class="mt-3"><span class="ara-fw-semi-bold">UI/UX Excellence -</span> Human-centered designs that drive engagement.</p>
-                      </div>
-                  </div>
-                  <div class="slide">
-                      <div class="d-flex p-3 ai">
-                          <img src="assets/img/AI.png" class="img-fluid h-75" alt="">
-                          <p class="mt-3"><span class="ara-fw-semi-bold">AI-Powered Innovations -</span> Smarter automation for better efficiency.</p>
-                      </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-       </section>
-         <!-- ===== SECTION CORE END ========== -->
-
-
-
-      <!--===============  SECTION TAB START ===============-->
-      <section class="section--tab container">
-         <div class="section--tab__heading">
-            <h1 class="ara-fw-semi-bold"
-            data-aos="fade-up"
-            data-aos-duration="1000">
-            Offer Exceptional Service to Customers, <br>
-            Every Single Day
-            </h1>
-         </div>
-         <div class="section--tab__para">
-           <p class="ara-line-height-1-5"
-           data-aos="fade-up"
-           data-aos-anchor-placement="top-bottom"
-           data-aos-duration="1000">
-            we prioritize excellence in every interaction. With innovation, dedication, and seamless support, <br> we deliver top-tier service—every single day.
-         </p>
-         </div>
-         <div class="container mx-auto">
-            <div class="tab-header">
-               <button class="tab-btn active tab-btn-1" data-tab="tab1">Ensure cohesion</button>
-               <button class="tab-btn tab-btn-2" data-tab="tab2">Maintain authority</button>
-               <button class="tab-btn tab-btn-3 ms-2" data-tab="tab3">Deliver rapid outcomes</button>
-            </div>
-            <div class="tab-content active first-tab p-5" id="tab1">
-               <div class="tab-content-left">
-                 <div class="animate">
-                  <h3 class="ms-2">Ensure cohesion</h3>
-                  <p class="ara-line-height-1-5 p-2">Creating a unified, seamless experience where every element works together effortlessly for maximum efficiency and impact. </p>
-                 </div>
-                  <div class="mt-4 arrow-box d-flex gap-4 ms-2">
-                     <div class="circle"> <i class="ri-arrow-left-s-line" id="arrow-reverse"></i></div>
-                     <div class="circle">   <i class="ri-arrow-right-s-line" id="arrow-forward"></i></div>
-
-                  </div>
-               </div>
-               <div class="tab-content-right">
-                  <img src="assets/img/zh-ann-case-study.png" class="img-fluid" alt="Illustration">
-               </div>
-            </div>
-            <div class="tab-content p-5 second-tab" id="tab2">
-               <div class="tab-content-left">
-                 <div class="animate-2">
-                  <h3 class="ms-2">Maintain authority</h3>
-                  <p class="ara-line-height-1-5 p-2">Establishing trust through expertise, precision, and innovation—delivering solutions with confidence and reliability. </p>
-                 </div>
-                  <div class="mt-4 arrow-box d-flex gap-4 ms-2">
-                     <div class="circle"> <i class="ri-arrow-left-s-line" id="arrow-reverse"></i></div>
-                     <div class="circle">   <i class="ri-arrow-right-s-line" id="arrow-forward"></i></div>
-
-                  </div>
-               </div>
-               <div class="tab-content-right">
-                  <img src="assets/img/zh-ann-case-study.png" class="img-fluid" alt="Illustration">
-               </div>
-            </div>
-            <div class="tab-content p-5 third-tab" id="tab3">
-               <div class="tab-content-left">
-                  <div class="animate-3">
-                     <h3 class="ms-2">Deliver rapid outcomes</h3>
-                     <p class="ara-line-height-1-5 p-2">Accelerating success with agile solutions—delivering swift, high-impact results without compromising quality. </p>
-
-                  </div>
-                  <div class="mt-4 arrow-box d-flex gap-4 ms-2">
-                     <div class="circle"> <i class="ri-arrow-left-s-line" id="arrow-reverse"></i></div>
-                     <div class="circle">   <i class="ri-arrow-right-s-line" id="arrow-forward"></i></div>
-
-                  </div>
-               </div>
-               <div class="tab-content-right">
-                  <img src="assets/img/zh-ann-case-study.png" class="img-fluid" alt="Illustration">
-               </div>
-            </div>
-         </div>
-         </div>
-      </section>
-      <!--===============  SECTION TAB END ===============-->
-
-
-      <!--===============  SECTION CORE VALUE START ===============-->
-      <section class="section--corevalue">
-         <h1 class="text-center">The Heart of Our Mission <br>
-            <span class="ara-fw-semi-bold ara-line-height-1-5">Core Values</span></h1>
-         <div class="container">
-               <div class="row g-5 mt-3 mx-auto my-auto">
-                  <div class="col-lg-6 col-12">
-                     <div class="d-flex gap-5 core-innovation"
-                       data-aos="fade-up"
-                          data-aos-duration="1000">
-                        <img src="assets/img/Bulb.png" class="img-fluid" alt="">
-                        <div>
-                           <h5 class="ara-fw-semi-bold pt-4">Innovation</h5>
-                           <p>Breaking boundaries, redefining possibilities! We embrace cutting-edge technology and creative thinking to craft solutions that drive progress, enhance user experiences, and shape the future of digital transformation.</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                     <div class="d-flex gap-5 core-integrity"
-                       data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom"
-                         data-aos-duration="1000">
-                        <img src="assets/img/heart.png" class="img-fluid" alt="">
-                        <div>
-                           <h5 class="ara-fw-semi-bold  pt-4">Integrity</h5>
-                           <p >Built on trust, driven by honesty! We uphold transparency, ethical practices, and a commitment to delivering reliable solutions. Our foundation is strong because it’s rooted in authenticity, accountability, and excellence.</p>
-                        </div>
-                     </div>
-
-                  </div>
-
-               </div>
-               <div class="row g-5 mt-3 mx-auto my-auto">
-                  <div class="col-lg-6 col-12">
-                     <div class="d-flex gap-5 core-excellence"
-                     data-aos="fade-up"
-                     data-aos-anchor-placement="top-bottom"
-                      data-aos-duration="1000">
-                        <img src="assets/img/Star.png" class="img-fluid" alt="">
-                        <div>
-                           <h5 class="ara-fw-semi-bold pt-4">Excellence</h5>
-                           <p>Precision, passion, and perfection! We push boundaries to deliver top-tier solutions with uncompromising quality. Every project reflects our dedication to innovation, efficiency, and outstanding results.</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                     <div class="d-flex gap-5 core-customer"
-                     data-aos="fade-up"
-                     data-aos-anchor-placement="top-bottom"
-                      data-aos-duration="1000">
-                        <img src="assets/img/Hand.png" class="img-fluid" alt="">
-                        <div>
-                           <h5 class="ara-fw-semi-bold pt-4">Customer First</h5>
-                           <p>Built on trust, driven by honesty! We uphold transparency, ethical practices, and a commitment to delivering reliable solutions. Our foundation is strong because it’s rooted in authenticity, accountability, and excellence.</p>
-                        </div>
-                     </div>
-
-                  </div>
-
-               </div>
-         </div>
-
-      </section>
-      <!--===============  SECTION CORE VALUE END ===============-->
-
-
-      <!--===============  SECTION PRIVACY START ===============-->
-      <section class="section--privacy">
-        <h1 class="text-center ara-line-height-1-5 ara-fw-semi-bold">Respecting Your Privacy, <br>
-          Securing Your Trust</h1>
-          <div class="container privacy-container mt-5 p-5">
-            <div class="row g-5 mx-auto my-auto">
-               <div class="col-lg-6 col-12"
-               data-aos="fade-up"
-                data-aos-duration="1000">
-                  <h5>We Promise</h5>
-                  <p class="mt-3">
-                     Your privacy is our top priority. We’re committed to safeguarding your personal information with the highest standards of security. By respecting your privacy, we foster a relationship built on trust and reliability, ensuring you can feel confident every time.
-                  </p>
-               </div>
-               <div class="col-lg-6 col-12 right-content">
-                  <div class="ratio ratio-16x9">
-                     <iframe
-                         src="https://www.youtube.com/embed/pSKualsVCFg"
-                         title="YouTube video"
-                         allowfullscreen>
-                     </iframe>
-                 </div>
-               </div>
-            </div>
+          <!-- Search Section -->
+          <div class="search-content">
+            <input
+              type="search"
+              id="search-box"
+              placeholder="Search for product overviews and more..."
+            />
+            <i class="ri-close-line close-btn" id="close-btn"></i>
+            <i class="ri-search-line" id="search-2"></i>
           </div>
+        </div>
+        <div class="ara--nav-content nav__desk__button ara--nav-desk-button">
+          <a href="#" class="nav__link nav-search">
+            <i class="ri-search-line" id="search-icon"></i>
+          </a>
+          <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+        </div>
+      </nav>
+    </header>
+    <!--=============== HEADER END ===============-->
 
-      </section>
+    <!-- === SECTION HERO START ===  -->
 
-      <!--===============  SECTION PRIVACY END ===============-->
+    <section class="section" data-aos="fade-up" data-aos-duration="1500">
+      <img
+        src="assets/img/blue-heart.png"
+        alt="Blue Heart"
+        class="blue-heart"
+      />
+      <img src="assets/img/red-heart.png" alt="Red Heart" class="red-heart" />
 
-
-      <!--===============  SECTION SUCCESS START ===============-->
-      <section class="section--success container-fluid">
-       <div class="container">
-         <div class="row g-5 mx-auto my-auto p-5">
-            <div class="col-lg-6 col-12 order-2 order-lg-1">
-               <img src="assets/img/Global.webp"  alt="">
-            </div>
-            <div class="col-lg-6 col-12 order-1 order-lg-2"
-            data-aos="fade-up"
-             data-aos-duration="1000">
-               <h3 class="ara-line-height-1-5 ara-fw-semi-bold p-2">
-                  Shaping the Future, <br>
-                   Empowering Global Success
-               </h3>
-               <p class="ara-line-height-1-5 p-2">
-                  From startups to enterprises, our solutions have transformed businesses across industries. We combine creativity with cutting-edge technology to create digital products that make an impact—anytime, anywhere.
-               </p>
-            </div>
-         </div>
-       </div>
-      </section>
-      <!--===============  SECTION SUCCESS END ===============-->
-
-      <!-- ================ Section Service-Product  START  ================== -->
-      <section class="section--service container-fluid p-3">
-         <div class="container">
-            <div class="row g-5 mx-auto my-auto p-3">
-               <div class="col-lg-6 col-12"
-               data-aos="fade-up"
-                data-aos-duration="1000">
-                  <h3 class="ara-fw-semi-bold ara-line-height-1-5 pt-4">
-                     Industries We Empower <br> with Technology
-                  </h3>
-                  <p class="ara-line-height-1-5 pt-4">
-                     At Ara Discover Technologies, we innovate across industries, delivering cutting-edge digital solutions that streamline operations, enhance experiences, and drive growth.
-                  </p>
-                  <a href="" class="service-link pt-4">Learn More <i class="ri-arrow-right-line ms-2"></i> </a>
-               </div>
-
-               <div class="col-lg-6 col-12">
-                  <div class="row row-cols-1 g-5">
-
-                     <!-- View in Large Screen -->
-                   <div class="col-lg-4 d-none  d-lg-block">
-                     <div class="scroll-content">
-                        <div class="row g-4">
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Health.webp" class="icon-img" alt="Healthcare">
-                                  <h6>Healthcare</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Education.webp" class="icon-img" alt="Education">
-                                  <h6>Education</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Finance.webp" class="icon-img" alt="">
-                                  <h6>Finance &
-                                   FinTech</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                           <div class="card">
-                               <img src="assets/img/E-Commerce.webp" class="icon-img" alt="">
-                               <h6>Retail & E-Commerce</h6>
-                           </div>
-                           </div>
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Entertainment.webp" class="icon-img" alt="">
-                                  <h6>Entertainment & Media</h6>
-                              </div>
-                              </div>
-                              <div class="col">
-                                 <div class="card">
-                                     <img src="assets/img/Transportation.webp" class="icon-img" alt="">
-                                     <h6>Transportation & Logistics</h6>
-                                 </div>
-                                 </div>
-                                 <div class="col">
-                                    <div class="card">
-                                        <img src="assets/img/sports.webp" class="icon-img" alt="">
-                                        <h6>Sports & Fitness</h6>
-                                    </div>
-                                    </div>
-                         </div>
-                         <div class="row g-4 d-none d-lg-block mt-2">
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Health.webp" class="icon-img" alt="Healthcare">
-                                  <h6>Healthcare</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Education.webp" class="icon-img" alt="Education">
-                                  <h6>Education</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Finance.webp" class="icon-img" alt="">
-                                  <h6>Finance &
-                                   FinTech</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                           <div class="card">
-                               <img src="assets/img/E-Commerce.webp" class="icon-img" alt="">
-                               <h6>Retail & E-Commerce</h6>
-                           </div>
-                           </div>
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Entertainment.webp" class="icon-img" alt="">
-                                  <h6>Entertainment & Media</h6>
-                              </div>
-                              </div>
-                              <div class="col">
-                                 <div class="card">
-                                     <img src="assets/img/Transportation.webp" class="icon-img" alt="">
-                                     <h6>Transportation & Logistics</h6>
-                                 </div>
-                                 </div>
-                                 <div class="col">
-                                    <div class="card">
-                                        <img src="assets/img/sports.webp" class="icon-img" alt="">
-                                        <h6>Sports & Fitness</h6>
-                                    </div>
-                                    </div>
-                         </div>
-                     </div>
-                   </div>
-                   <div class="col-lg-4 d-none d-lg-block">
-                     <div class="scroll-content-2">
-                        <div class="row g-4">
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Mobility.webp" class="icon-img" alt="">
-                                  <h6>Automotive &
-                                    Mobility </h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Agri.webp" class="icon-img" alt="">
-                                  <h6>Agriculture & AgriTech</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Estate.webp" class="icon-img" alt="">
-                                  <h6>RealEstate &
-                                    PropTech</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                           <div class="card">
-                               <img src="assets/img/Manufacturing.webp" class="icon-img" alt="">
-                               <h6>Manufacturing &
-                                 Industry</h6>
-                           </div>
-                           </div>
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Sector.webp" class="icon-img" alt="">
-                                  <h6>Goverment &
-                                    Public Sector</h6>
-                              </div>
-                              </div>
-                              <div class="col">
-                                 <div class="card">
-                                    <img src="assets/img/Travel.webp" class="icon-img" alt="">
-                                    <h6>Travel &
-                                    Hospitality</h6>
-                                 </div>
-                              </div>
-                         </div>
-                         <div class="row g-4 d-none d-lg-block mt-2">
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Mobility.webp" class="icon-img" alt="">
-                                  <h6>Automotive &
-                                    Mobility </h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Agri.webp" class="icon-img" alt="">
-                                  <h6>Agriculture & AgriTech</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Estate.webp" class="icon-img" alt="">
-                                  <h6>RealEstate &
-                                    PropTech</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                           <div class="card">
-                               <img src="assets/img/Manufacturing.webp" class="icon-img" alt="">
-                               <h6>Manufacturing &
-                                 Industry</h6>
-                           </div>
-                           </div>
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Sector.webp" class="icon-img" alt="">
-                                  <h6>Goverment &
-                                    Public Sector</h6>
-                              </div>
-                              </div>
-                              <div class="col">
-                                 <div class="card">
-                                     <img src="assets/img/Travel.webp" class="icon-img" alt="">
-                                     <h6>Travel &
-                                       Hospitality</h6>
-                                 </div>
-                                 </div>
-                         </div>
-                     </div>
-                   </div>
-                   <div class="col-lg-4 d-none d-lg-block">
-                     <div class="scroll-content-3">
-                        <div class="row g-4">
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Communication.webp" class="icon-img" alt="">
-                                  <h6>Tele-communication</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Cyber.webp" class="icon-img" alt="">
-                                  <h6>Cybersecurity</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/HR.webp" class="icon-img" alt="">
-                                  <h6>HR & Workforce</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                           <div class="card">
-                               <img src="assets/img/Tech.webp" class="icon-img" alt="">
-                               <h6>LegalTech</h6>
-                           </div>
-                           </div>
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Energy.webp" class="icon-img" alt="">
-                                  <h6>Energy &
-                                    Utilities </h6>
-                              </div>
-                              </div>
-                              <div class="col">
-                                 <div class="card">
-                                     <img src="assets/img/Construction.webp" class="icon-img" alt="">
-                                     <h6>Construction &
-                                       Infrastructure</h6>
-                                 </div>
-                                 </div>
-                                 <div class="col">
-                                    <div class="card">
-                                        <img src="assets/img/Aerospace.webp" class="icon-img" alt="">
-                                        <h6>Aerospace & Defence</h6>
-                                    </div>
-                                    </div>
-                         </div>
-                         <div class="row g-4 d-none d-lg-block mt-2">
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Communication.webp" class="icon-img" alt="">
-                                  <h6>Tele-communication</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Cyber.webp" class="icon-img" alt="">
-                                  <h6>Cybersecurity</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/HR.webp" class="icon-img" alt="">
-                                  <h6>HR & Workforce</h6>
-                              </div>
-                          </div>
-                          <div class="col">
-                           <div class="card">
-                               <img src="assets/img/Tech.webp" class="icon-img" alt="">
-                               <h6>LegalTech</h6>
-                           </div>
-                           </div>
-                           <div class="col">
-                              <div class="card">
-                                  <img src="assets/img/Energy.webp" class="icon-img" alt="">
-                                  <h6>Energy &
-                                    Utilities </h6>
-                              </div>
-                              </div>
-                              <div class="col">
-                                 <div class="card">
-                                     <img src="assets/img/Construction.webp" class="icon-img" alt="">
-                                     <h6>Construction &
-                                       Infrastructure</h6>
-                                 </div>
-                                 </div>
-                                 <div class="col">
-                                    <div class="card">
-                                        <img src="assets/img/Aerospace.webp" class="icon-img" alt="">
-                                        <h6>Aerospace & Defence</h6>
-                                    </div>
-                                    </div>
-                         </div>
-                     </div>
-                   </div>
-                   <!-- View in Large Screen  -->
-
-                 </div>
-
-
-               </div>
-
-            </div>
-         </div>
-      </section>
-      <!--================ Section Service-Product END  ============== -->
-
-
-      <!--===============  SECTION HELP DESK START ===============-->
-      <section class="section--helpdesk__fluid">
-        <h3 class="text-center ara-line-height-1-5 ara-fw-semi-bold"
-        data-aos="fade-up"
-        data-aos-duration="1000">
-        Powering Global Businesses with Smart <br>
-          Help Desk Solutions</h3>
-          <div class="container">
-            <div class="row g-5 mx-auto my-auto"
-            data-aos="fade-up"
-            data-aos-duration="1000">
-               <div class="col-lg-4 col-12">
-                  <div class="card card-1 p-3">
-                     <i class="ri-customer-service-line ms-2 fs-1"></i>
-                     <div class="ms-2 mt-3">
-                     <h6 class="ara-fw-semi-bold">For Customer Support</h6>
-                     <p>Mail at : aratech@gmail.com</p>
-                     <p>Call at : 0123456789</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-12">
-                  <div class="card card-2 p-3">
-                    <span class="ms-1 fs-1"> 🎯</span>
-                     <div class="ms-2 mt-3">
-                     <h6 class="ara-fw-semi-bold">For Sales & Marketing</h6>
-                     <p>Mail at : aratech@gmail.com</p>
-                     <p>Call at : 0123456789</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-12">
-                  <div class="card card-3 p-3">
-                     <span class="ms-1 fs-1">🤝</span>
-                     <div class="ms-2 mt-3">
-                     <h6 class="ara-fw-semi-bold">For All Business Needs:</h6>
-                     <p>Mail at : aratech@gmail.com</p>
-                     <p>Call at : 0123456789</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-          </div>
-      </section>
-      <!--===============  SECTION HELP DESK END ===============-->
-
-
-        <!-- ========= SECTION FAQ START -->
-        <section class="section-faq"
-        data-aos="fade-up"
-                  data-aos-duration="1000">
-         <h3 class="text-center ara-fw-semi-bold">Frequently asked questions</h3>
-         <div class="container mt-5">
-
-            <!-- 1 FAQ -->
-            <div class="faq-item active">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>What services does Ara Discover Technologies offer?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>We provide a wide range of services including UI/UX Design, Web & Mobile App Development, Graphic Design, Branding, and Digital Marketing. We also offer tailored software products for education, healthcare, and business management.</p>
-               </div>
-            </div>
-
-             <!-- 2 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     Where is Ara Discover Technologies located?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>Our headquarters is in Thanjavur, Tamil Nadu, India. However, we proudly serve clients across the globe.</p>
-               </div>
-            </div>
-
-             <!-- 3 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     Do you work with international clients?</span>
-               </div>
-               <div class="faq-answer">
-                  <p> Absolutely! We work with businesses worldwide and have successfully delivered projects across various countries.</p>
-               </div>
-            </div>
-
-             <!-- 4 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     What industries do you specialize in?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>We specialize in the education, healthcare, salon/spa, and small business sectors. However, we're open to projects across all industries.</p>
-               </div>
-            </div>
-
-             <!-- 5 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     Do you provide both web and mobile app development?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>Yes, we design and develop both responsive websites and mobile applications (iOS & Android) tailored to your business needs.</p>
-               </div>
-            </div>
-
-             <!-- 6 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     Can I hire you for just design or development only?</span>
-               </div>
-               <div class="faq-answer">
-                  <p> Yes! We offer standalone services for UI/UX design, development, branding, or marketing — whatever suits your current needs.</p>
-               </div>
-            </div>
-
-             <!-- 7 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     What is your design process like?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>Our design process includes research, wireframing, prototyping, UI design, user testing, and iteration — ensuring the best user experience and business impact.</p>
-               </div>
-            </div>
-
-            <!-- 8 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     How long does a typical project take?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>Project timelines vary based on complexity. A basic website may take 2–4 weeks, while full-scale apps or platforms could take a few months. We'll provide a clear timeline before we begin.</p>
-               </div>
-            </div>
-
-            <!-- 9 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     Do you offer post-launch support and maintenance?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>Yes! We offer post-launch support, bug fixing, and maintenance plans to ensure your project runs smoothly.</p>
-               </div>
-            </div>
-
-            <!-- 10 FAQ -->
-            <div class="faq-item">
-               <div class="faq-question d-flex align-items-center">
-                  <i class="ri-arrow-drop-down-line toggle"></i> <span>
-                     How do I get started with Ara Discover Technologies?</span>
-               </div>
-               <div class="faq-answer">
-                  <p>Just contact us through our website, and we’ll schedule a free consultation to understand your goals and propose the best solution.</p>
-               </div>
-            </div>
-
-         </div>
-      </section>
-       <!-- ========= SECTION FAQ END -->
-
-
-      <!-- ============== SECTION CONNECT START ============ -->
-       <section class="section--connect container-fluid p-5"
-       data-aos="fade-up"
-       data-aos-duration="1000"> &nbsp;
-         <div class="container text-center">
-            <h3 class="ara-fw-semi-bold pt-3">Unleash Creativity, Build Brilliance</h3>
-            <p class="pt-2">Let's get you started</p>
-            <a href="" class="btn">Connect Now</a>
-         </div>
-       </section>
-        <!-- ============== SECTION CONNECT END =============== -->
-
-
-      <!-- ============== SECTION JOURNEY START ================ -->
-      <section class="section-journey"
-         data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  data-aos-duration="1000">
-            <h6 class="text-center ara-fw-semi-bold">Explore Our Journey</h6>
-            <div class="container">
-               <div class="row">
-                  <div class="mt-4 d-flex flex-wrap justify-content-center text-center">
-                     <h4> <a href="" class="ara-fw-semi-bold text-dark linkedin"> LinkedIn</a> </h4>
-                     <h4> <a href="" class="ara-fw-semi-bold text-dark instagram"> Instagram</a> </h4>
-                     <h4> <a href="" class="ara-fw-semi-bold text-dark"> Youtube</a> </h4>
-                     <h4> <a href="" class="ara-fw-semi-bold text-dark dribble"> Dribble</a> </h4>
-                     <h4> <a href="" class="ara-fw-semi-bold text-dark X"> X</a> </h4>
-                  </div>
-               </div>
-            </div>
-      </section>
-      <!-- ================= SECTION JOURNEY END  ===================-->
-
-
-      <!-- ================ SECTION FOOTER START ============= -->
-         <section class="section-footer container-fluid p-5">
-            <div class="container p-5">
-               <div class="row mx-auto my-auto g-4 justify-content-lg-evenly">
-                  <div class="col-lg-2 col-md-4 col-12">
-                     <h4 class="ara-fw-semi-bold">Products</h4>
-                     <a href="">Schoolmate</a>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-12">
-                     <h4 class="ara-fw-semi-bold">Quick Links</h4>
-                     <a href="">About Us</a> <br>
-                     <a href="">Solutions</a> <br>
-                     <a href="">Contact Us</a>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-12">
-                     <h4 class="ara-fw-semi-bold">Support</h4>
-                     <a href="">Help Center</a> <br>
-                     <a href="">FAQs</a> <br>
-                     <a href="">User Guides</a> <br>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-12">
-                     <h4 class="ara-fw-semi-bold">Legel</h4>
-                     <a href="">Privacy Policy </a> <br>
-                     <a href="">Terms & Conditions</a> <br>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-12">
-                     <h4 class="ara-fw-semi-bold">Contact Us</h4>
-                     <a href="">Email</a> <br>
-                     <a href="">Phone</a> <br>
-                     <a href="">Address</a> <br>
-                  </div>
-               </div>
-            </div>
-         </section>
-
-      <!-- ========= COPYRIGHT START ======== -->
-      <div class="d-flex justify-content-center align-items-center w-100 copyright">
-         <h6>© 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.</h6>
+      <div class="title" data-aos="fade-up" data-aos-duration="1500">
+        Innovate. Build. Scale.
       </div>
-      <!-- ========= COPYRIGHT END ======== -->
-      <!--=========== SECTION FOOTER END ============= -->
+      <div class="description" data-aos="fade-up" data-aos-duration="1500">
+        Welcome to ARA Discover Technologies — where your digital vision takes
+        form. We specialize in custom software, mobile applications, cloud
+        solutions, and automation tools to empower businesses across industries.
+      </div>
 
+      <div class="form-container" data-aos="fade-up" data-aos-duration="1500">
+        <input type="email" placeholder="Enter Your Work Email" />
+        <button>Get a Demo</button>
+      </div>
+    </section>
 
+    <!-- === SECTION HERO END ===  -->
 
+    <!-- === SECTION IFRAME START ===  -->
 
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
+    <section
+      class="video-section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <h2 class="video-heading">Watch How It Works</h2>
 
-      <!-- ============ BOOTSTRAP JS =========== -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="video-thumbnail-wrapper" id="videoContainer">
+        <!-- Thumbnail -->
+        <img
+          src="./assets/img/Video-thumbnail.png"
+          alt="Video Thumbnail"
+          class="video-thumbnail-img"
+        />
 
+        <!-- Play Button -->
+        <div class="play-button" onclick="loadVideo()">
+          <svg width="80" height="80" viewBox="0 0 100 100">
+            <circle
+              cx="50"
+              cy="50"
+              r="48"
+              stroke="#f8e88d"
+              stroke-width="4"
+              fill="white"
+            />
+            <polygon points="40,30 70,50 40,70" fill="#f8e88d" />
+          </svg>
+        </div>
 
-      <!-- ========= AOS Library =========== -->
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-         AOS.init();
-      </script>
-   </body>
+        <!-- Video Embed (hidden initially) -->
+        <div class="video-embed" id="videoEmbed">
+          <iframe
+            src=""
+            title="How It Works Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SECTION IFRAME END ===  -->
+
+    <!-- === SECTION GREEN START ===  -->
+    <section
+      class="section--green"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="container mx-auto">
+        <div class="row mx-auto">
+          <div
+            class="col-lg-6 col-12 section-green-left order-2 order-lg-1 position-relative"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <img
+              src="./assets/img/Dashboard.jpg"
+              class="img-fluid base-image"
+              alt="Base Dashboard"
+            />
+            <img
+              src="./assets/img/HM Dashboard.png"
+              class="img-fluid overlay-image"
+              alt="Analytics Overlay"
+            />
+          </div>
+
+          <div
+            class="col-lg-6 col-12 section-green-right order-1 order-lg-2 p-5"
+          >
+            <div data-aos="fade-up" data-aos-duration="1500">
+              <h3 class="ara-fw-bold ara-line-height-1-5 ms-4">
+                Design. Code. Conquer – <br />
+                Apps & Software that <br />
+                Redefine Possibilities
+              </h3>
+              <p class="section--green__right__para ara-line-height-1-5 p-4">
+                We don’t just build software—we craft <br />
+                exceptional digital experiences. From intuitive <br />
+                UI/UX design to scalable software solutions, we <br />
+                engineer tools that empower businesses to <br />
+                thrive in an ever-evolving digital landscape.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- === SECTION GREEN END ===========  -->
+
+    <!-- ===== SECTION CORE START ============ -->
+
+    <section
+      class="carousel-section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="carousel-title">Our Key Offerings</div>
+      <div class="carousel-wrapper">
+        <button class="arrow left" onclick="moveCarousel(-1)">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="carousel" id="carousel">
+          <div class="carousel-card">
+            <img src="./assets/img/icon-1.png" alt="Icon" class="card-icon" />
+            <h3>Mobile & Web App Development</h3>
+            <p>
+              Crafting seamless digital experiences across Android, iOS, and web
+              platforms.
+            </p>
+          </div>
+          <div class="carousel-card">
+            <img src="./assets/img/icon-2.png" alt="Icon" class="card-icon" />
+            <h3>CRM, ERP Systems</h3>
+            <p>
+              Customizable software solutions to manage operations, finance,
+              customer relations, and more.
+            </p>
+          </div>
+          <div class="carousel-card">
+            <img src="./assets/img/icon-3.png" alt="Icon" class="card-icon" />
+            <h3>Data Security Solutions</h3>
+            <p>
+              End-to-end encrypted systems for secure data handling in
+              compliance with industry standards.
+            </p>
+          </div>
+          <div class="carousel-card">
+            <img src="./assets/img/icon-4.png" alt="Icon" class="card-icon" />
+            <h3>Custom Software Development</h3>
+            <p>
+              Tailored applications that solve real-world business challenges.
+            </p>
+          </div>
+          <div class="carousel-card">
+            <img src="./assets/img/icon-5.png" alt="Icon" class="card-icon" />
+            <h3>Custom Websites Development</h3>
+            <p>
+              Custom websites built to match your brand and solve real business
+              needs.
+            </p>
+          </div>
+        </div>
+        <button class="arrow right" onclick="moveCarousel(1)">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <div style="text-align: right; margin-top: 10px">
+        <span class="counter" id="counter">1 / 5</span>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CORE END ========== -->
+
+    <!--===============  SECTION TAB START ===============-->
+
+    <section
+      class="content-switcher-section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="left-content">
+        <h2>
+          Offer Exceptional Service to<br />
+          Customers, <strong>Every Single Day.</strong>
+        </h2>
+        <div class="nav-buttons">
+          <button id="prevBtn">&#10094;</button>
+          <button id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="right-content" id="rightContent">
+        <h3><span>Ensure cohesion</span></h3>
+        <p>
+          Creating a unified, seamless experience where every element works
+          together effortlessly for maximum efficiency and impact.
+        </p>
+      </div>
+    </section>
+
+    <!--===============  SECTION TAB ENDS ===============-->
+
+    <!-- <section class="section--tab container">
+      <div class="section--tab__heading">
+        <h1
+          class="ara-fw-semi-bold"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Offer Exceptional Service to Customers, <br />
+          Every Single Day
+        </h1>
+      </div>
+      <div class="section--tab__para">
+        <p
+          class="ara-line-height-1-5"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1000"
+        >
+          we prioritize excellence in every interaction. With innovation,
+          dedication, and seamless support, <br />
+          we deliver top-tier service—every single day.
+        </p>
+      </div>
+      <div class="container mx-auto">
+        <div class="tab-header">
+          <button class="tab-btn active tab-btn-1" data-tab="tab1">
+            Ensure cohesion
+          </button>
+          <button class="tab-btn tab-btn-2" data-tab="tab2">
+            Maintain authority
+          </button>
+          <button class="tab-btn tab-btn-3 ms-2" data-tab="tab3">
+            Deliver rapid outcomes
+          </button>
+        </div>
+        <div class="tab-content active first-tab p-5" id="tab1">
+          <div class="tab-content-left">
+            <div class="animate">
+              <h3 class="ms-2">Ensure cohesion</h3>
+              <p class="ara-line-height-1-5 p-2">
+                Creating a unified, seamless experience where every element
+                works together effortlessly for maximum efficiency and impact.
+              </p>
+            </div>
+            <div class="mt-4 arrow-box d-flex gap-4 ms-2">
+              <div class="circle">
+                <i class="ri-arrow-left-s-line" id="arrow-reverse"></i>
+              </div>
+              <div class="circle">
+                <i class="ri-arrow-right-s-line" id="arrow-forward"></i>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content-right">
+            <img
+              src="assets/img/zh-ann-case-study.png"
+              class="img-fluid"
+              alt="Illustration"
+            />
+          </div>
+        </div>
+        <div class="tab-content p-5 second-tab" id="tab2">
+          <div class="tab-content-left">
+            <div class="animate-2">
+              <h3 class="ms-2">Maintain authority</h3>
+              <p class="ara-line-height-1-5 p-2">
+                Establishing trust through expertise, precision, and
+                innovation—delivering solutions with confidence and reliability.
+              </p>
+            </div>
+            <div class="mt-4 arrow-box d-flex gap-4 ms-2">
+              <div class="circle">
+                <i class="ri-arrow-left-s-line" id="arrow-reverse"></i>
+              </div>
+              <div class="circle">
+                <i class="ri-arrow-right-s-line" id="arrow-forward"></i>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content-right">
+            <img
+              src="assets/img/zh-ann-case-study.png"
+              class="img-fluid"
+              alt="Illustration"
+            />
+          </div>
+        </div>
+        <div class="tab-content p-5 third-tab" id="tab3">
+          <div class="tab-content-left">
+            <div class="animate-3">
+              <h3 class="ms-2">Deliver rapid outcomes</h3>
+              <p class="ara-line-height-1-5 p-2">
+                Accelerating success with agile solutions—delivering swift,
+                high-impact results without compromising quality.
+              </p>
+            </div>
+            <div class="mt-4 arrow-box d-flex gap-4 ms-2">
+              <div class="circle">
+                <i class="ri-arrow-left-s-line" id="arrow-reverse"></i>
+              </div>
+              <div class="circle">
+                <i class="ri-arrow-right-s-line" id="arrow-forward"></i>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content-right">
+            <img
+              src="assets/img/zh-ann-case-study.png"
+              class="img-fluid"
+              alt="Illustration"
+            />
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--===============  SECTION TAB END ===============-->
+
+    <!--===============  SECTION CORE VALUE START ===============-->
+
+    <section
+      class="core-values-section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="core-values-heading">
+        <h2>The Heart of Our Mission</h2>
+        <h3><strong>Core Values</strong></h3>
+      </div>
+
+      <div class="core-values-list">
+        <div class="value-item">
+          <div class="icon-circle">
+            <img src="./assets/img/value-1.png" alt="Innovation" />
+          </div>
+          <p>Innovation</p>
+        </div>
+        <div class="value-item">
+          <div class="icon-circle">
+            <img src="./assets/img/value-2.png" alt="Integrity" />
+          </div>
+          <p>Integrity</p>
+        </div>
+        <div class="value-item">
+          <div class="icon-circle">
+            <img src="./assets/img/value-3.png" alt="Excellence" />
+          </div>
+          <p>Excellence</p>
+        </div>
+        <div class="value-item">
+          <div class="icon-circle">
+            <img src="./assets/img/value-4.png" alt="Customer First" />
+          </div>
+          <p>Customer First</p>
+        </div>
+      </div>
+    </section>
+
+    <!--===============  SECTION CORE VALUE END ===============-->
+
+    <!--===============  SECTION PRIVACY START ===============-->
+    <section
+      class="section--privacy"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <h1 class="text-center ara-line-height-1-5 ara-fw-semi-bold">
+        Respecting Your Privacy, <br />
+        Securing Your Trust
+      </h1>
+      <div class="container privacy-container mt-5 p-5">
+        <div class="row g-5 mx-auto my-auto">
+          <div
+            class="col-lg-6 col-12 video-container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h5>We Promise</h5>
+            <p class="mt-3 ara-para-text">
+              Your privacy is our top priority. We’re committed to safeguarding
+              your personal information with the highest standards of security.
+              By respecting your privacy, we foster a relationship built on
+              trust and reliability, ensuring you can feel confident every time.
+            </p>
+          </div>
+          <div class="col-lg-6 col-12 right-content">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src=""
+                id="youtubeVideo"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+              <div class="video-overlay-play-button" id="playButton"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===============  SECTION PRIVACY END ===============-->
+
+    <!--===============  SECTION SUCCESS START ===============-->
+    <section
+      class="section--success container-fluid"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="container">
+        <div class="row g-5 mx-auto my-auto p-5">
+          <div class="col-lg-6 col-12 order-2 order-lg-1">
+            <img src="assets/img/Global.webp" alt="" />
+          </div>
+          <div
+            class="col-lg-6 col-12 order-1 order-lg-2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3 class="ara-line-height-1-5 ara-fw-semi-bold p-2">
+              Shaping the Future, <br />
+              Empowering Global Success
+            </h3>
+            <p class="ara-line-height-1-5 p-2">
+              From startups to enterprises, our solutions have transformed
+              businesses across industries. We combine creativity with
+              cutting-edge technology to create digital products that make an
+              impact—anytime, anywhere.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--===============  SECTION SUCCESS END ===============-->
+
+    <!-- ================ Section Service-Product  START  ================== -->
+    <section class="section--service container-fluid p-3">
+      <div class="container">
+        <div class="row g-5 mx-auto my-auto p-3">
+          <div
+            class="col-lg-6 col-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3 class="ara-fw-semi-bold ara-line-height-1-5 pt-4">
+              Industries We Empower <br />
+              with Technology
+            </h3>
+            <p class="ara-line-height-1-5 pt-4">
+              At Ara Discover Technologies, we innovate across industries,
+              delivering cutting-edge digital solutions that streamline
+              operations, enhance experiences, and drive growth.
+            </p>
+            <a href="" class="service-link pt-4"
+              >Learn More <i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="row row-cols-1 g-5">
+              <!-- View in Large Screen -->
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="scroll-content">
+                  <div class="row g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Health.webp"
+                          class="icon-img"
+                          alt="Healthcare"
+                        />
+                        <h6>Healthcare</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Education.webp"
+                          class="icon-img"
+                          alt="Education"
+                        />
+                        <h6>Education</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Finance.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Finance & FinTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/E-Commerce.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Retail & E-Commerce</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Entertainment.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Entertainment & Media</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Transportation.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Transportation & Logistics</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/sports.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Sports & Fitness</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4 d-none d-lg-block mt-2">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Health.webp"
+                          class="icon-img"
+                          alt="Healthcare"
+                        />
+                        <h6>Healthcare</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Education.webp"
+                          class="icon-img"
+                          alt="Education"
+                        />
+                        <h6>Education</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Finance.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Finance & FinTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/E-Commerce.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Retail & E-Commerce</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Entertainment.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Entertainment & Media</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Transportation.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Transportation & Logistics</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/sports.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Sports & Fitness</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="scroll-content-2">
+                  <div class="row g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Mobility.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Automotive & Mobility</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Agri.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Agriculture & AgriTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Estate.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>RealEstate & PropTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Manufacturing.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Manufacturing & Industry</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Sector.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Goverment & Public Sector</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Travel.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Travel & Hospitality</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4 d-none d-lg-block mt-2">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Mobility.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Automotive & Mobility</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Agri.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Agriculture & AgriTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Estate.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>RealEstate & PropTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Manufacturing.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Manufacturing & Industry</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Sector.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Goverment & Public Sector</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Travel.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Travel & Hospitality</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="scroll-content-3">
+                  <div class="row g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Communication.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Tele-communication</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Cyber.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Cybersecurity</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="assets/img/HR.webp" class="icon-img" alt="" />
+                        <h6>HR & Workforce</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Tech.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>LegalTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Energy.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Energy & Utilities</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Construction.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Construction & Infrastructure</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Aerospace.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Aerospace & Defence</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4 d-none d-lg-block mt-2">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Communication.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Tele-communication</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Cyber.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Cybersecurity</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="assets/img/HR.webp" class="icon-img" alt="" />
+                        <h6>HR & Workforce</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Tech.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>LegalTech</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Energy.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Energy & Utilities</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Construction.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Construction & Infrastructure</h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="assets/img/Aerospace.webp"
+                          class="icon-img"
+                          alt=""
+                        />
+                        <h6>Aerospace & Defence</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- View in Large Screen  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Section Service-Product END  ============== -->
+
+    <!--===============  SECTION HELP DESK START ===============-->
+    <section class="section--helpdesk__fluid">
+      <h3
+        class="text-center ara-line-height-1-5 ara-fw-semi-bold"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        Powering Global Businesses with Smart <br />
+        Help Desk Solutions
+      </h3>
+      <div class="container">
+        <div
+          class="row g-5 mx-auto my-auto"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="col-lg-4 col-12">
+            <div class="card card-1 p-3">
+              <i class="ri-customer-service-line ms-2 fs-1"></i>
+              <div class="ms-2 mt-3">
+                <h6 class="ara-fw-semi-bold">For Customer Support</h6>
+                <p>Mail at : aratech@gmail.com</p>
+                <p>Call at : 0123456789</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="card card-2 p-3">
+              <span class="ms-1 fs-1"> 🎯</span>
+              <div class="ms-2 mt-3">
+                <h6 class="ara-fw-semi-bold">For Sales & Marketing</h6>
+                <p>Mail at : aratech@gmail.com</p>
+                <p>Call at : 0123456789</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="card card-3 p-3">
+              <span class="ms-1 fs-1">🤝</span>
+              <div class="ms-2 mt-3">
+                <h6 class="ara-fw-semi-bold">For All Business Needs:</h6>
+                <p>Mail at : aratech@gmail.com</p>
+                <p>Call at : 0123456789</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--===============  SECTION HELP DESK END ===============-->
+
+    <!-- ========= SECTION FAQ START -->
+    <section class="section-faq" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-center ara-fw-semi-bold">Frequently asked questions</h3>
+      <div class="container mt-5">
+        <!-- 1 FAQ -->
+        <div class="faq-item active">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>What services does Ara Discover Technologies offer?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We provide a wide range of services including UI/UX Design, Web &
+              Mobile App Development, Graphic Design, Branding, and Digital
+              Marketing. We also offer tailored software products for education,
+              healthcare, and business management.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span> Where is Ara Discover Technologies located?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Our headquarters is in Thanjavur, Tamil Nadu, India. However, we
+              proudly serve clients across the globe.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>Do you work with international clients?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Absolutely! We work with businesses worldwide and have
+              successfully delivered projects across various countries.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>What industries do you specialize in?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We specialize in the education, healthcare, salon/spa, and small
+              business sectors. However, we're open to projects across all
+              industries.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>Do you provide both web and mobile app development?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, we design and develop both responsive websites and mobile
+              applications (iOS & Android) tailored to your business needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>Can I hire you for just design or development only?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! We offer standalone services for UI/UX design, development,
+              branding, or marketing—whatever suits your current needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- 7 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>What is your design process like?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              OOur design process includes research, wireframing, prototyping,
+              UI design, user testing, and iteration—ensuring the best user
+              experience and business impact.
+            </p>
+          </div>
+        </div>
+
+        <!-- 8 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span> How long does a typical project take?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Project timelines vary based on complexity. A basic website may
+              take 2–4 weeks, while full-scale apps or platforms could take a
+              few months. We'll provide a clear timeline before we begin.
+            </p>
+          </div>
+        </div>
+
+        <!-- 9 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span>Do you offer post-launch support and maintenance?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! We offer post-launch support, bug fixing, and maintenance
+              plans to ensure your project runs smoothly.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10 FAQ -->
+        <div class="faq-item">
+          <div class="faq-question d-flex align-items-center">
+            <i class="ri-arrow-drop-down-line toggle"></i>
+            <span> How do I get started with Ara Discover Technologies?</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Just contact us through our website, and we’ll schedule a free
+              consultation to understand your goals and propose the best
+              solution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========= SECTION FAQ END -->
+
+    <!-- ============== SECTION CONNECT START ============ -->
+    <section
+      class="section--connect container-fluid p-5"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      &nbsp;
+      <div class="container text-center">
+        <h3 class="ara-fw-semi-bold pt-3">
+          Unleash Creativity, Build Brilliance
+        </h3>
+        <p class="pt-2">Let's get you started</p>
+        <a href="" class="btn">Connect Now</a>
+      </div>
+    </section>
+    <!-- ============== SECTION CONNECT END =============== -->
+
+    <!-- ============== SECTION JOURNEY START ================ -->
+    <section
+      class="section-journey"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1000"
+    >
+      <h6 class="text-center ara-fw-semi-bold">Explore Our Journey</h6>
+      <div class="container">
+        <div class="row">
+          <div class="mt-4 d-flex flex-wrap justify-content-center text-center">
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark linkedin">
+                LinkedIn</a
+              >
+            </h4>
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark instagram">
+                Instagram</a
+              >
+            </h4>
+            <h4><a href="" class="ara-fw-semi-bold text-dark"> Youtube</a></h4>
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark dribble"> Dribble</a>
+            </h4>
+            <h4><a href="" class="ara-fw-semi-bold text-dark X"> X</a></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= SECTION JOURNEY END  ===================-->
+
+    <!-- ================ SECTION FOOTER START ============= -->
+    <section class="section-footer container-fluid">
+      <div class="container p-5">
+        <div class="row mx-auto my-auto g-4 justify-content-lg-evenly">
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Products</h4>
+            <a href="">Schoolmate</a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Quick Links</h4>
+            <a href="">About Us</a> <br />
+            <a href="">Solutions</a> <br />
+            <a href="">Contact Us</a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Support</h4>
+            <a href="">Help Center</a> <br />
+            <a href="">FAQs</a> <br />
+            <a href="">User Guides</a> <br />
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Legel</h4>
+            <a href="">Privacy Policy </a> <br />
+            <a href="">Terms & Conditions</a> <br />
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Contact Us</h4>
+            <a href="">Email</a> <br />
+            <a href="">Phone</a> <br />
+            <a href="">Address</a> <br />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= COPYRIGHT START ======== -->
+    <div
+      class="d-flex justify-content-center align-items-center w-100 copyright"
+    >
+      <h6>
+        © 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.
+      </h6>
+    </div>
+    <!-- ========= COPYRIGHT END ======== -->
+    <!--=========== SECTION FOOTER END ============= -->
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ============ BOOTSTRAP JS =========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========= AOS Library =========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      function loadVideo() {
+        const embed = document.getElementById("videoEmbed");
+        const container = document.getElementById("videoContainer");
+        const iframe = embed.querySelector("iframe");
+
+        // Replace with your actual video URL
+        iframe.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
+
+        embed.style.display = "block";
+        container.querySelector(".video-thumbnail-img").style.display = "none";
+        container.querySelector(".play-button").style.display = "none";
+      }
+    </script>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const counter = document.getElementById("counter");
+      const cards = document.querySelectorAll(".carousel-card");
+      const total = cards.length;
+
+      let cardWidth = 0;
+      let visibleCount = 0;
+
+      function updateMeasurements() {
+        if (cards.length === 0) return;
+
+        // More precise card width
+        const cardRect = cards[0].getBoundingClientRect();
+        cardWidth = cardRect.width;
+
+        // Carousel visible area
+        const carouselRect = carousel.getBoundingClientRect();
+        visibleCount = Math.round(carouselRect.width / cardWidth);
+      }
+
+      function moveCarousel(direction) {
+        updateMeasurements();
+
+        // Get current scroll index
+        const scrollLeft = carousel.scrollLeft;
+        const currentIndex = Math.round(scrollLeft / cardWidth);
+
+        // Calculate new index
+        const newIndex = Math.min(
+          Math.max(currentIndex + direction, 0),
+          total - visibleCount
+        );
+
+        // Scroll to new position
+        carousel.scrollTo({ left: cardWidth * newIndex, behavior: "smooth" });
+
+        // Delay counter update to allow scroll
+        setTimeout(updateCounter, 300);
+      }
+
+      function updateCounter() {
+        updateMeasurements();
+
+        const scrollLeft = carousel.scrollLeft;
+        const currentIndex = Math.round(scrollLeft / cardWidth);
+        const end = Math.min(currentIndex + visibleCount, total);
+
+        counter.innerText = `${end} / ${total}`;
+      }
+
+      window.addEventListener("resize", () => {
+        updateMeasurements();
+        updateCounter();
+      });
+
+      window.addEventListener("load", () => {
+        updateMeasurements();
+        updateCounter();
+      });
+
+      carousel.addEventListener("scroll", () => {
+        // Debounce to prevent flickering
+        clearTimeout(carousel._scrollTimer);
+        carousel._scrollTimer = setTimeout(updateCounter, 100);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contents = [
+          {
+            title: "Ensure cohesion",
+            text: "Creating a unified, seamless experience where every element works together effortlessly for maximum efficiency and impact.",
+          },
+          {
+            title: "Maintain authority",
+            text: "Maintain authority by projecting confidence, setting clear expectations, and leading with consistency — ensuring every decision reinforces trust, respect, and control across every touchpoint.",
+          },
+          {
+            title: "Deliver rapid outcomes",
+            text: "Deliver rapid outcomes by streamlining processes, eliminating delays, and executing with precision — ensuring swift, impactful results that drive progress and exceed expectations.",
+          },
+        ];
+
+        let currentIndex = 0;
+
+        function switchContent(direction) {
+          const contentBox = document.getElementById("rightContent");
+
+          contentBox.style.opacity = 0;
+
+          setTimeout(() => {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = contents.length - 1;
+            if (currentIndex >= contents.length) currentIndex = 0;
+
+            // Determine color class
+            let colorClass = "";
+            if (currentIndex === 1) colorClass = "red";
+            else if (currentIndex === 2) colorClass = "green";
+
+            contentBox.innerHTML = `
+      <h3><span class="${colorClass}">${contents[currentIndex].title}</span></h3>
+      <p>${contents[currentIndex].text}</p>
+    `;
+
+            contentBox.style.opacity = 1;
+          }, 400);
+        }
+
+        document
+          .getElementById("prevBtn")
+          .addEventListener("click", () => switchContent(-1));
+        document
+          .getElementById("nextBtn")
+          .addEventListener("click", () => switchContent(1));
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const playBtn = document.getElementById("playButton");
+        const iframe = document.getElementById("youtubeVideo");
+
+        playBtn.addEventListener("click", function () {
+          iframe.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
+          playBtn.style.display = "none"; // Hide button once clicked
+        });
+      });
+    </script>
+  </body>
 </html>

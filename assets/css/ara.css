@@ -48,6 +48,9 @@
   .ara-line-height-1 { line-height: 1; }
   .ara-line-height-1-5 { line-height: 1.5; }
   .ara-letter-spacing { letter-spacing: 1px; }
+  .ara-para-text {
+    font-size: 1.1rem;
+  }
   
   /* ============================= */
   /*         COLORS & BACKGROUND   */
