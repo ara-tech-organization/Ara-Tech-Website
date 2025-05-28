@@ -37,7 +37,7 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  
+
 }
 
 body {
@@ -45,11 +45,11 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  background-image: url("/assets/img/BG\ Pattern.png");
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  height: 100vh; 
+  background-image: url("assets/img/BG\ Pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   overflow-x: hidden !important;
 }
 
@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb {
 /*=============== NAV ===============*/
 .ara--nav {
   height: var(--header-height);
- 
+
 }
 
 
@@ -218,7 +218,7 @@ body::-webkit-scrollbar-thumb {
   height: 60px;
   background: var(--first-color);
   border-radius: 10%;
-  animation: spin 2s ease-in-out 1; 
+  animation: spin 2s ease-in-out 1;
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -293,7 +293,7 @@ body::-webkit-scrollbar-thumb {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
   }
 
-  
+
 .box-2 input.active {
   opacity: 1;
   visibility: visible;
@@ -340,7 +340,7 @@ body::-webkit-scrollbar-thumb {
   #search-input::placeholder {
     font-size: 15px;
   }
-  
+
 }
 
 
@@ -348,7 +348,7 @@ body::-webkit-scrollbar-thumb {
   #search-input::placeholder {
     font-size: 13px;
   }
-  
+
 }
 
 
@@ -445,7 +445,7 @@ body::-webkit-scrollbar-thumb {
     transition: top 0.4s, opacity 0.3s;
   }
 
-  
+
 
   .ara--nav-menu::-webkit-scrollbar {
     width: 0.5rem;
@@ -455,7 +455,7 @@ body::-webkit-scrollbar-thumb {
     background-color: hsl(220, 12%, 70%);
   }
 
-  
+
 }
 
 .ara--nav-link {
@@ -555,7 +555,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: var(--font-medium);
   color: var(--text-color);
   transition: color 0.3s;
-  
+
 }
 
 .ara--nav-dropdown-link:hover {
@@ -574,7 +574,7 @@ body::-webkit-scrollbar-thumb {
     padding-left: 1.5rem;
   }
 
-  
+
 }
 
 /* For large devices */
@@ -742,7 +742,7 @@ body::-webkit-scrollbar-thumb {
     width: 32px;
     height: 32px;
   }
-  
+
 }
 
 
@@ -834,5 +834,5 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
   }
 
- 
+
 }
