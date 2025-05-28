@@ -203,6 +203,10 @@ function handleSearch(value) {
   let query = value.trim().toLowerCase().replace(/\s+/g, "");
   if (!query) return;
 
+    const targetUrl = `${query}.html`;
+
+  console.log("Trying to navigate to:", targetUrl);
+
   // Normalize to canonical section ID if alias found
   if (aliasMap[query]) {
     query = aliasMap[query];
