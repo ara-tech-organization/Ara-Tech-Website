@@ -40,8 +40,6 @@
     <!-- ================ AOS Library ===================  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-
-
       .info-section {
         padding: 10rem 20px;
         text-align: center;
@@ -538,7 +536,7 @@
               />
               <i class="ri-close-line" id="close"></i>
               <i class="ri-search-line" id="icon-2"></i>
-                <ul id="search-results" class="search-results-list"></ul>
+              <ul id="search-results" class="search-results-list"></ul>
             </div>
           </div>
         </div>
@@ -547,54 +545,61 @@
         <div class="nav__menu ara--nav-menu" id="nav-menu">
           <ul class="nav__list ara--nav-list">
             <li>
-              <a href="index.html" class="nav__link ara--nav-link "
-                >Home</a
-              >
+              <a href="index.html" class="nav__link ara--nav-link">Home</a>
             </li>
             <!--=============== DROPDOWN 1 ===============-->
-           <li class="dropdown__item ara--nav-dropdown-item">
-  <div class="ara--nav-link dropdown__button ara--nav-dropdown-button">
-    Solutions
-    <i class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"></i>
-  </div>
+            <li class="dropdown__item ara--nav-dropdown-item">
+              <div
+                class="ara--nav-link dropdown__button ara--nav-dropdown-button"
+              >
+                Solutions
+                <i
+                  class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"
+                ></i>
+              </div>
 
-  <!-- DROPDOWN CONTAINER -->
-  <div class="dropdown__container ara--nav-dropdown-container">
-    <ul class="dropdown__list ara--nav-dropdown-list">
+              <!-- DROPDOWN CONTAINER -->
+              <div class="dropdown__container ara--nav-dropdown-container">
+                <ul class="dropdown__list ara--nav-dropdown-list">
+                  <!-- Heading aligned with items -->
+                  <li class="dropdown-heading-item">
+                    <div class="dropdown-heading">Solutions</div>
+                  </li>
 
-      <!-- Heading aligned with items -->
-      <li class="dropdown-heading-item">
-        <div class="dropdown-heading">Solutions</div>
-      </li>
+                  <!-- Actual solution -->
+                  <li>
+                    <a
+                      href="https://araschoolmate.com/"
+                      target="_blank"
+                      class="dropdown__link ara--nav-dropdown-link solution-item"
+                    >
+                      <div class="solution-icon">
+                        <img src="assets/img/Group 586.png" alt="Happy face" />
+                      </div>
 
-      <!-- Actual solution -->
-      <li>
-        <a href="https://araschoolmate.com/" target="_blank" class="dropdown__link ara--nav-dropdown-link solution-item">
-         <div class="solution-icon">
-  <img src="assets/img/Group 586.png" alt="Happy face" />
-</div>
-
-          <div class="solution-text">
-            <div class="solution-title">
-              SchoolMate
-              <span class="arrow-icon">→</span>
-            </div>
-            <div class="solution-description">
-              SchoolMate is a smart platform for easy school management and parent communication.
-            </div>
-          </div>
-        </a>
-      </li>
-
-    </ul>
-  </div>
-</li>
+                      <div class="solution-text">
+                        <div class="solution-title">
+                          SchoolMate
+                          <span class="arrow-icon">→</span>
+                        </div>
+                        <div class="solution-description">
+                          SchoolMate is a smart platform for easy school
+                          management and parent communication.
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
             <li>
               <a href="about2.html" class="ara--nav-link">About Us</a>
             </li>
             <li>
-              <a href="organisation.html" class="ara--nav-link active">Organization</a>
+              <a href="organisation.html" class="ara--nav-link active"
+                >Organization</a
+              >
             </li>
             <li>
               <a href="contactus.html" class="ara--nav-link">Contact Us</a>
@@ -653,7 +658,12 @@
 
     <!-- =================Carousel section ======================== -->
 
-    <section class="workflow-section" data-aos="fade-up" data-aos-duration="1500" id="how">
+    <section
+      class="workflow-section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      id="how"
+    >
       <div class="workflow-header">
         <h2>How We Work</h2>
         <p>We follow a structured process that brings your vision to life.</p>
@@ -791,7 +801,12 @@
     <!-- =========================== Carousel ends =============================== -->
     <!-- =========================== Container starts ============================ -->
 
-    <section class="what-we-do" data-aos="fade-up" data-aos-duration="1500" id="what">
+    <section
+      class="what-we-do"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      id="what"
+    >
       <div class="container">
         <div class="what-we-do-wrapper">
           <!-- Left: Image -->
@@ -853,22 +868,38 @@
 
     <!-- ======================Container Ends ====================================== -->
     <!--  =========================Technology Starts ================================ -->
-    <section class="tech-stack-section" data-aos="fade-up" data-aos-duration="1500">
+    <section
+      class="tech-stack-section"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
       <h2 class="section-title">Technology Stack</h2>
       <div class="tech-icons">
-        <div class="tech-item"><img src="./assets/img/tech-1.png" alt="React" /></div>
-        <div class="tech-item"><img src="./assets/img/tech-2.png" alt="MySQL" /></div>
-        <div class="tech-item"><img src="./assets/img/tech-3.png" alt="Firebase" /></div>
-        <div class="tech-item"><img src="./assets/img/tech-6.png" alt="GitHub" /></div>
-        <div class="tech-item"><img src="./assets/img/tech-4.png" alt="Flutter" /></div>
-        <div class="tech-item"><img src="./assets/img/tech-5.png" alt="Figma" /></div>
+        <div class="tech-item">
+          <img src="./assets/img/tech-1.png" alt="React" />
+        </div>
+        <div class="tech-item">
+          <img src="./assets/img/tech-2.png" alt="MySQL" />
+        </div>
+        <div class="tech-item">
+          <img src="./assets/img/tech-3.png" alt="Firebase" />
+        </div>
+        <div class="tech-item">
+          <img src="./assets/img/tech-6.png" alt="GitHub" />
+        </div>
+        <div class="tech-item">
+          <img src="./assets/img/tech-4.png" alt="Flutter" />
+        </div>
+        <div class="tech-item">
+          <img src="./assets/img/tech-5.png" alt="Figma" />
+        </div>
       </div>
     </section>
 
     <!-- ============================Technology Ends ================================= -->
     <!-- ============== SECTION CONNECT START ============ -->
     <section
-      class="section--connect container-fluid p-5 "
+      class="section--connect container-fluid p-5"
       data-aos="fade-up"
       data-aos-duration="1000"
     >
