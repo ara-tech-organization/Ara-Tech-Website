@@ -188,7 +188,7 @@ security:"security",
 how:"how",
 what:"what",
 whatwedo:"what",
-howitworks:"howitwork"
+howitworks:"howitwork",
 howitwork:"howitwork"
 };
 
