@@ -205,8 +205,8 @@ value:"index.html",
   security: "about2.html",
   what: "about2.html",
   howitwork: "about2.html",
-  what:"organisation.html"
-  what:"organisation.html"
+  what:"organisation.html",
+  what:"organisation.html",
   howitwork:"organisation.html"
 };
 
