@@ -840,8 +840,37 @@
       }
 
       /*  --------------------------------------------------------Service Ends ------------------------------------------ */
+.box-2 {
+  width: 300px;      /* or whatever fits your design */
+  max-width: 90vw;   /* mobile-friendly */
+  /* …the rest… */
+}
+
+      .box-2.show {
+        display: block;
+      }
+      .search-results-list {
+        list-style: none;
+        margin: 0.5rem 0 0;
+        padding: 0;
+        max-height: 300px;
+        overflow-y: auto;
+        border-top: 1px solid #eee;
+      }
+      .search-results-list li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f2f2f2;
+      }
+      .search-results-list a {
+        text-decoration: none;
+        color: #333;
+      }
+      .search-results-list a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
+    <main class="page-content">
   <body>
     <!--========== PRELOADER START ==============-->
     <!-- <div id="preloader">
@@ -880,6 +909,7 @@
               />
               <i class="ri-close-line" id="close"></i>
               <i class="ri-search-line" id="icon-2"></i>
+                <ul id="search-results" class="search-results-list"></ul>
             </div>
           </div>
         </div>
@@ -893,183 +923,44 @@
               >
             </li>
             <!--=============== DROPDOWN 1 ===============-->
-            <li class="dropdown__item ara--nav-dropdown-item">
-              <div
-                class="ara--nav-link dropdown__button ara--nav-dropdown-button"
-              >
-                Solutions
-                <i
-                  class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"
-                ></i>
-              </div>
-              <div class="dropdown__container ara--nav-dropdown-container">
-                <div class="dropdown-left">
-                  <div class="dropdown__content ara--nav-dropdown-content">
-                    <div class="dropdown__group ara--nav-dropdown-group">
-                      <div class="dropdown__icon ara--nav-dropdown-icon">
-                        <i class="ri-graduation-cap-fill"></i>
-                      </div>
-                      <span class="dropdown__title ara--nav-dropdown-title"
-                        >Education</span
-                      >
-                      <ul class="dropdown__list ara--nav-dropdown-list">
-                        <li>
-                          <a
-                            href="#"
-                            class="dropdown__link ara--nav-dropdown-link"
-                            >Schoolmate</a
-                          >
-                        </li>
-                        <!-- <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
-                                 </li> -->
-                      </ul>
-                    </div>
-                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
-                              <div class="dropdown__icon ara--nav-dropdown-icon">
-                                 <i class="ri-price-tag-3-line"></i>
-                              </div>
-                              <span class="dropdown__title ara--nav-dropdown-title">Retail</span>
-                              <ul class="dropdown__list ara--nav-dropdown-list">
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
-                                 </li>
-                              </ul>
-                           </div> -->
-                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
-                              <div class="dropdown__icon ara--nav-dropdown-icon">
-                                 <i class="ri-bar-chart-2-line"></i>
-                              </div>
-                              <span class="dropdown__title ara--nav-dropdown-title">Travel</span>
-                              <ul class="dropdown__list ara--nav-dropdown-list">
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
-                                 </li>
-                              </ul>
-                           </div> -->
-                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
-                              <div class="dropdown__icon ara--nav-dropdown-icon">
-                                 <i class="ri-macbook-fill"></i>
-                              </div>
-                              <span class="dropdown__title ara--nav-dropdown-title">IT Services</span>
-                              <ul class="dropdown__list ara--nav-dropdown-list">
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
-                                 </li>
-                              </ul>
-                           </div> -->
-                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
-                              <div class="dropdown__icon ara--nav-dropdown-icon">
-                                 <i class="ri-signal-tower-fill"></i>
-                              </div>
-                              <span class="dropdown__title ara--nav-dropdown-title">Telecommunication</span>
-                              <ul class="dropdown__list ara--nav-dropdown-list">
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
-                                 </li>
-                              </ul>
-                           </div> -->
-                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
-                              <div class="dropdown__icon ara--nav-dropdown-icon">
-                                 <i class="ri-government-line"></i>
-                              </div>
-                              <span class="dropdown__title ara--nav-dropdown-title">Government</span>
-                              <ul class="dropdown__list ara--nav-dropdown-list">
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Billing Software</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
-                                 </li>
-                              </ul>
-                           </div> -->
-                  </div>
-                </div>
-                <div class="dropdown-right">
-                  <div class="right__content">
-                    <div class="team__group">
-                      <h6 class="ara-fw-semi-bold">Teams</h6>
-                      <div class="group-icon">
-                        <a href="" class="icon-link">
-                          <i class="ri-customer-service-fill"></i>
-                          <span class="ara--nav-dropdown-title"
-                            >Customer Support</span
-                          >
-                        </a>
-                      </div>
-                      <div class="group-icon">
-                        <a href="" class="icon-link">
-                          <i class="ri-checkbox-line"></i>
-                          <span class="ara--nav-dropdown-title"
-                            >IT Support</span
-                          ></a
-                        >
-                      </div>
-                      <div class="group-icon">
-                        <a href="" class="icon-link"
-                          ><i class="ri-building-fill"></i>
-                          <span class="ara--nav-dropdown-title"
-                            >Human Resources</span
-                          ></a
-                        >
-                      </div>
-                      <div class="group-icon">
-                        <a href="" class="icon-link"
-                          ><i class="ri-building-fill"></i>
-                          <span class="ara--nav-dropdown-title"
-                            >Facilities</span
-                          ></a
-                        >
-                      </div>
-                      <div class="group-icon">
-                        <a href="" class="icon-link"
-                          ><i class="ri-building-fill"></i>
-                          <span class="ara--nav-dropdown-title"
-                            >Marketing</span
-                          ></a
-                        >
-                      </div>
-                      <div class="group-icon">
-                        <a href="" class="icon-link"
-                          ><i class="ri-building-fill"></i>
-                          <span class="ara--nav-dropdown-title">Sales</span></a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+           <li class="dropdown__item ara--nav-dropdown-item">
+  <div class="ara--nav-link dropdown__button ara--nav-dropdown-button">
+    Solutions
+    <i class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"></i>
+  </div>
+
+  <!-- DROPDOWN CONTAINER -->
+  <div class="dropdown__container ara--nav-dropdown-container">
+    <ul class="dropdown__list ara--nav-dropdown-list">
+
+      <!-- Heading aligned with items -->
+      <li class="dropdown-heading-item">
+        <div class="dropdown-heading">Solutions</div>
+      </li>
+
+      <!-- Actual solution -->
+      <li>
+        <a href="https://araschoolmate.com/" target="_blank" class="dropdown__link ara--nav-dropdown-link solution-item">
+         <div class="solution-icon">
+  <img src="assets/img/Group 586.png" alt="Happy face" />
+</div>
+
+          <div class="solution-text">
+            <div class="solution-title">
+              SchoolMate
+              <span class="arrow-icon">→</span>
+            </div>
+            <div class="solution-description">
+              SchoolMate is a smart platform for easy school management and parent communication.
+            </div>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</li>
+
             <li>
               <a href="about2.html" class="ara--nav-link">About Us</a>
             </li>
@@ -1140,11 +1031,7 @@
 
     <!-- === SECTION IFRAME START ===  -->
 
-    <section
-      class="video-section"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
+    <section class="video-section" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="video-heading">Watch How It Works</h2>
 
       <div class="video-thumbnail-wrapper" id="videoContainer">
@@ -1187,11 +1074,7 @@
     <!-- === SECTION IFRAME END ===  -->
 
     <!-- === SECTION GREEN START ===  -->
-    <section
-      class="section--green"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
+    <section class="section--green" data-aos="fade-up" data-aos-duration="1500">
       <div class="container mx-auto">
         <div class="row mx-auto">
           <div
@@ -1450,6 +1333,7 @@
       class="core-values-section"
       data-aos="fade-up"
       data-aos-duration="1500"
+      id="value"
     >
       <div class="core-values-heading">
         <h2>The Heart of Our Mission</h2>
@@ -1491,6 +1375,7 @@
       class="section--privacy"
       data-aos="fade-up"
       data-aos-duration="1500"
+      id="privacy"
     >
       <h1 class="text-center ara-line-height-1-5 ara-fw-semi-bold">
         Respecting Your Privacy, <br />
@@ -1561,7 +1446,7 @@
     <!--===============  SECTION SUCCESS END ===============-->
 
     <!-- ================ Section Service-Product  START  ================== -->
-    <section class="section--service container-fluid p-3">
+    <section class="section--service container-fluid p-3" id="service">
       <div class="container">
         <div class="row g-5 mx-auto my-auto p-3">
           <div
@@ -2011,7 +1896,7 @@
     <!--================ Section Service-Product END  ============== -->
 
     <!--===============  SECTION HELP DESK START ===============-->
-    <section class="section--helpdesk__fluid">
+    <section class="searchable-section section--helpdesk__fluid" id="help">
       <h3
         class="text-center ara-line-height-1-5 ara-fw-semi-bold"
         data-aos="fade-up"
@@ -2062,7 +1947,7 @@
     <!--===============  SECTION HELP DESK END ===============-->
 
     <!-- ========= SECTION FAQ START -->
-    <section class="section-faq" data-aos="fade-up" data-aos-duration="1000">
+    <section class="searchable-section" id="faq" data-aos="fade-up" data-aos-duration="1000">
       <h3 class="text-center ara-fw-semi-bold">Frequently asked questions</h3>
       <div class="container mt-5">
         <!-- 1 FAQ -->
@@ -2320,6 +2205,45 @@
     <script>
       AOS.init();
     </script>
+    <!-- <script>
+const searchBox = document.getElementById("search-box");
+const searchBtn = document.getElementById("search-2");
+const closeBtn = document.getElementById("close-btn");
+
+function handleSearch() {
+  const query = searchBox.value.trim().toLowerCase().replace(/\s+/g, "");
+
+  if (!query) return;
+
+  const targetUrl = `${query}.html`;
+
+  fetch(targetUrl, { method: "HEAD" })
+    .then((res) => {
+      if (res.ok) {
+        window.location.href = targetUrl;
+      } else {
+        alert("No matching page found.");
+      }
+    })
+    .catch(() => {
+      alert("Error searching. Try again later.");
+    });
+}
+
+searchBtn.addEventListener("click", handleSearch);
+
+searchBox.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
+});
+
+closeBtn.addEventListener("click", function () {
+  searchBox.value = "";
+  searchBox.focus();
+});
+
+</script> -->
 
     <script>
       function loadVideo() {
@@ -2467,5 +2391,6 @@
         });
       });
     </script>
+    </main>
   </body>
 </html>

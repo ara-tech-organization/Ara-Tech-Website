@@ -109,7 +109,8 @@ function closePopup(event) {
 
 
 // Search section
-
+// ===== Desktop Search Toggle =====
+// ===== Search Toggle (Desktop) =====
 const search = document.getElementById("search-icon");
 const container = document.querySelector(".search-content");
 const input = document.getElementById("search-box");
@@ -130,15 +131,11 @@ close.addEventListener("click", () => {
   input.value = "";
 });
 
-
-
-// Mobile, Tablet Search Section
-
+// ===== Search Toggle (Mobile/Tablet) =====
 const icon = document.getElementById("icon-search");
 const box = document.querySelector(".box-2");
 const inputBox = document.getElementById("search-input");
 const closeBtn = document.getElementById("close");
-
 
 icon.addEventListener("click", () => {
   icon.classList.add("active");
@@ -147,16 +144,104 @@ icon.addEventListener("click", () => {
   closeBtn.classList.add("active");
 });
 
-
-closeBtn.addEventListener("click", ()=>{
+closeBtn.addEventListener("click", () => {
   icon.classList.remove("active");
   box.classList.remove("active");
   inputBox.classList.remove("active");
   closeBtn.classList.remove("active");
-  inputBox.value= "";
+  inputBox.value = "";
 });
 
+// ===== Search Navigation =====
+const searchBtn = document.getElementById("search-2");
 
+// Sections that live inside index.html — add more here if needed
+const singlePageSections = new Set([
+  "help",
+  "service",
+  "faq",
+  "frequentlyaskedquestions",
+  "frequently-asked-questions",
+  "privacy",
+  "value",
+  "whychoose",
+  "whoweare",
+  "security",
+  "how",
+  "what"
+]);
+
+// Map known aliases to real section IDs for smooth scrolling
+const aliasMap = {
+  frequentlyaskedquestions: "faq",
+  "frequently-asked-questions": "faq",
+  help: "help",
+  faq: "faq",
+  service:"service",
+  privacy:"privacy",
+  value:"value",
+whychooseus: "whychoose",
+whoweare:"whoweare",
+who:"whoweare",
+security:"security",
+how:"how",
+what:"what",
+whatwedo:"what"
+};
+
+// Separate pages with full URLs or relative paths
+const pageMap = {
+  contact: "contactus.html",
+  organisation: "organisation.html",
+  about:"about2.html"
+};
+
+function handleSearch(value) {
+  let query = value.trim().toLowerCase().replace(/\s+/g, "");
+  if (!query) return;
+
+  // Normalize to canonical section ID if alias found
+  if (aliasMap[query]) {
+    query = aliasMap[query];
+  }
+
+if (singlePageSections.has(query)) {
+  const section = document.getElementById(query);
+  if (section) {
+    const yOffset = -180; // Adjust based on your fixed header height
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  } else {
+    alert("Section not found on this page.");
+  }
+}
+ else {
+    // Navigate to separate page if exists or fallback to query.html
+    const targetUrl = pageMap[query] || `${query}.html`;
+
+    fetch(targetUrl, { method: "HEAD" })
+      .then((res) => {
+        if (res.ok) {
+          window.location.href = targetUrl;
+        } else {
+          alert("No matching page found.");
+        }
+      })
+      .catch(() => {
+        alert("Error searching. Try again later.");
+      });
+  }
+}
+
+// Attach event listeners for desktop search box and mobile search box
+searchBtn.addEventListener("click", () => handleSearch(input.value));
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") handleSearch(input.value);
+});
+
+inputBox.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") handleSearch(inputBox.value);
+});
 
 
 // Slider Animation
@@ -206,14 +291,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// tab function 
+// tab function
 
 const buttons = document.querySelectorAll(".tab-btn");
 const contents = document.querySelectorAll(".tab-content");
-const arrowReverseList = document.querySelectorAll(".arrow-box .ri-arrow-left-s-line"); 
-const arrowForwardList = document.querySelectorAll(".arrow-box .ri-arrow-right-s-line"); 
+const arrowReverseList = document.querySelectorAll(".arrow-box .ri-arrow-left-s-line");
+const arrowForwardList = document.querySelectorAll(".arrow-box .ri-arrow-right-s-line");
 
-let tabCounter = 0; 
+let tabCounter = 0;
 
 function activateTab(index) {
   buttons.forEach((btn) => btn.classList.remove("active"));
@@ -221,7 +306,7 @@ function activateTab(index) {
 
   buttons[index].classList.add("active");
   contents[index].classList.add("active");
-  tabCounter = index; 
+  tabCounter = index;
 }
 
 buttons.forEach((button, index) => {
@@ -233,7 +318,7 @@ buttons.forEach((button, index) => {
 
 arrowReverseList.forEach((arrow) => {
   arrow.addEventListener("click", () => {
-    tabCounter = (tabCounter - 1 + contents.length) % contents.length; 
+    tabCounter = (tabCounter - 1 + contents.length) % contents.length;
     activateTab(tabCounter);
   });
 });
@@ -241,7 +326,7 @@ arrowReverseList.forEach((arrow) => {
 
 arrowForwardList.forEach((arrow) => {
   arrow.addEventListener("click", () => {
-    tabCounter = (tabCounter + 1) % contents.length; 
+    tabCounter = (tabCounter + 1) % contents.length;
     activateTab(tabCounter);
   });
 });
