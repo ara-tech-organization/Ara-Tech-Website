@@ -168,7 +168,8 @@ const singlePageSections = new Set([
   "whoweare",
   "security",
   "how",
-  "what"
+  "what",
+  "howitwork",
 ]);
 
 // Map known aliases to real section IDs for smooth scrolling
@@ -186,7 +187,9 @@ who:"whoweare",
 security:"security",
 how:"how",
 what:"what",
-whatwedo:"what"
+whatwedo:"what",
+howitworks:"howitwork"
+howitwork:"howitwork"
 };
 
 // Separate pages with full URLs or relative paths
