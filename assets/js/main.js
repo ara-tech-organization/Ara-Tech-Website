@@ -192,6 +192,24 @@ howitworks:"howitwork",
 howitwork:"howitwork"
 };
 
+const sectionPageMap = {
+  faq:"index.html",
+  "frequently-asked-questions":"index.html",
+help:"index.html",
+service:"index.html",
+privacy:"index.html",
+value:"index.html",
+  about: "about2.html",
+  whoweare: "about2.html",
+  whychoose: "about2.html",
+  security: "about2.html",
+  what: "about2.html",
+  howitwork: "about2.html",
+  what:"organisation.html",
+  what:"organisation.html",
+  howitwork:"organisation.html"
+};
+
 // Separate pages with full URLs or relative paths
 const pageMap = {
   contact: "contactus.html",
@@ -203,6 +221,10 @@ function handleSearch(value) {
   let query = value.trim().toLowerCase().replace(/\s+/g, "");
   if (!query) return;
 
+    const targetUrl = `${query}.html`;
+
+  console.log("Trying to navigate to:", targetUrl);
+
   // Normalize to canonical section ID if alias found
   if (aliasMap[query]) {
     query = aliasMap[query];
@@ -211,29 +233,34 @@ function handleSearch(value) {
 if (singlePageSections.has(query)) {
   const section = document.getElementById(query);
   if (section) {
-    const yOffset = -180; // Adjust based on your fixed header height
+    const yOffset = -180;
     const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: "smooth" });
   } else {
-    alert("Section not found on this page.");
+    // Redirect to the page where the section exists
+    if (sectionPageMap[query]) {
+      const targetPage = sectionPageMap[query];
+      window.location.href = `${targetPage}#${query}`;
+    } else {
+      alert("Section not found on this page.");
+    }
   }
-}
- else {
-    // Navigate to separate page if exists or fallback to query.html
-    const targetUrl = pageMap[query] || `${query}.html`;
+} else {
+  const targetUrl = pageMap[query] || `${query}.html`;
 
-    fetch(targetUrl, { method: "HEAD" })
-      .then((res) => {
-        if (res.ok) {
-          window.location.href = targetUrl;
-        } else {
-          alert("No matching page found.");
-        }
-      })
-      .catch(() => {
-        alert("Error searching. Try again later.");
-      });
-  }
+  fetch(targetUrl, { method: "HEAD" })
+    .then((res) => {
+      if (res.ok) {
+        window.location.href = targetUrl;
+      } else {
+        alert("No matching page found.");
+      }
+    })
+    .catch(() => {
+      alert("Error searching. Try again later.");
+    });
+}
+
 }
 
 // Attach event listeners for desktop search box and mobile search box
