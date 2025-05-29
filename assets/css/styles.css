@@ -386,6 +386,7 @@ body::-webkit-scrollbar-thumb {
   .ara--nav-logo img {
     width: 100px;
     height: auto;
+    /* padding: auto; */
     display: inline-block;
     margin-top: 3% !important;
   }
