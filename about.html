@@ -1,88 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--=============== REMIXICONS ===============-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-    rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/tab.css" />
-    <link rel="stylesheet" href="assets/css/ara.css">
+    <link rel="stylesheet" href="assets/css/ara.css" />
 
     <!-- ================ BOOTSTRAP CSS =================  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <title>Ara Technologies</title>
 
     <!-- ================ AOS Library ===================  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-
-
-   <!--=============== HEADER ===============-->
-   <header class="header ara--header">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header ara--header">
       <nav class="nav ara--nav container mx-auto">
-         <div class="nav__data ara--nav-content">
-            <a href="index.html" class="ara--nav-logo">
-               <img src="assets/img/Ara discoveries logo.png" class="img-fluid ms-3" alt="Ara Tech Logo">
-             </a>
+        <div class="nav__data ara--nav-content">
+          <a href="index.html" class="ara--nav-logo">
+            <img
+              src="assets/img/Ara discoveries logo 1.png"
+              class="img-fluid ms-3"
+              alt="Ara Tech Logo"
+            />
+          </a>
 
-            <!-- Responsive Buttons -->
-            <div class="nav__toggle ara--nav-toggle" id="nav-toggle">
-               <i class="ri-menu-line nav__toggle-menu ara--nav-toggle-menu"></i>
-               <i class="ri-close-line nav__toggle-close ara--nav-toggle-close"></i>
+          <!-- Responsive Buttons -->
+          <div class="nav__toggle ara--nav-toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__toggle-menu ara--nav-toggle-menu"></i>
+            <i
+              class="ri-close-line nav__toggle-close ara--nav-toggle-close"
+            ></i>
+          </div>
+          <div class="nav-search-two">
+            <a href="#" class="nav__link">
+              <i class="ri-search-line icon-search" id="icon-search"></i>
+            </a>
+            <div class="box-2">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search for product overviews and more..."
+              />
+              <i class="ri-close-line" id="close"></i>
+              <i class="ri-search-line" id="icon-2"></i>
             </div>
-            <div class="nav-search-two">
-               <a href="#" class="nav__link"> <i class="ri-search-line icon-search" id="icon-search"></i> </a>
-               <div class="box-2">
-                  <input type="search" id="search-input" placeholder="Search for product overviews and more...">
-                  <i class="ri-close-line" id="close"></i>
-                  <i class="ri-search-line" id="icon-2"></i>
-               </div>
+          </div>
+        </div>
 
-            </div>
-
-
-         </div>
-
-         <!--=============== NAV MENU ===============-->
-         <div class="nav__menu ara--nav-menu" id="nav-menu">
-            <ul class="nav__list ara--nav-list">
-               <li>
-                  <a href="index.html" class="nav__link ara--nav-link">Home</a>
-               </li>
-               <!--=============== DROPDOWN 1 ===============-->
-               <li class="dropdown__item ara--nav-dropdown-item">
-                  <div class="ara--nav-link dropdown__button ara--nav-dropdown-button">
-                     Solutions <i class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"></i>
-                  </div>
-                  <div class="dropdown__container ara--nav-dropdown-container">
-                    <div class="dropdown-left">
-                     <div class="dropdown__content ara--nav-dropdown-content">
-                        <div class="dropdown__group ara--nav-dropdown-group">
-                           <div class="dropdown__icon ara--nav-dropdown-icon">
-                              <i class="ri-graduation-cap-fill"></i>
-                           </div>
-                           <span class="dropdown__title ara--nav-dropdown-title">Education</span>
-                           <ul class="dropdown__list ara--nav-dropdown-list">
-                              <li>
-                                 <a href="#" class="dropdown__link ara--nav-dropdown-link">Schoolmate</a>
-                              </li>
-                              <!-- <li>
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu ara--nav-menu" id="nav-menu">
+          <ul class="nav__list ara--nav-list">
+            <li>
+              <a href="index.html" class="nav__link ara--nav-link">Home</a>
+            </li>
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item ara--nav-dropdown-item">
+              <div
+                class="ara--nav-link dropdown__button ara--nav-dropdown-button"
+              >
+                Solutions
+                <i
+                  class="ri-arrow-down-s-line dropdown__arrow ara--nav-dropdown-arrow"
+                ></i>
+              </div>
+              <div class="dropdown__container ara--nav-dropdown-container">
+                <div class="dropdown-left">
+                  <div class="dropdown__content ara--nav-dropdown-content">
+                    <div class="dropdown__group ara--nav-dropdown-group">
+                      <div class="dropdown__icon ara--nav-dropdown-icon">
+                        <i class="ri-graduation-cap-fill"></i>
+                      </div>
+                      <span class="dropdown__title ara--nav-dropdown-title"
+                        >Education</span
+                      >
+                      <ul class="dropdown__list ara--nav-dropdown-list">
+                        <li>
+                          <a
+                            href="#"
+                            class="dropdown__link ara--nav-dropdown-link"
+                            >Schoolmate</a
+                          >
+                        </li>
+                        <!-- <li>
                                  <a href="#" class="dropdown__link ara--nav-dropdown-link">School Management</a>
                               </li>
                               <li>
                                  <a href="#" class="dropdown__link ara--nav-dropdown-link">Hotel Booking</a>
                               </li> -->
-                           </ul>
-                        </div>
-                        <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                      </ul>
+                    </div>
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                            <div class="dropdown__icon ara--nav-dropdown-icon">
                               <i class="ri-price-tag-3-line"></i>
                            </div>
@@ -99,7 +122,7 @@
                               </li>
                            </ul>
                         </div> -->
-                        <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                            <div class="dropdown__icon ara--nav-dropdown-icon">
                               <i class="ri-bar-chart-2-line"></i>
                            </div>
@@ -116,7 +139,7 @@
                               </li>
                            </ul>
                         </div> -->
-                        <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                            <div class="dropdown__icon ara--nav-dropdown-icon">
                               <i class="ri-macbook-fill"></i>
                            </div>
@@ -133,7 +156,7 @@
                               </li>
                            </ul>
                         </div> -->
-                        <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                            <div class="dropdown__icon ara--nav-dropdown-icon">
                               <i class="ri-signal-tower-fill"></i>
                            </div>
@@ -150,7 +173,7 @@
                               </li>
                            </ul>
                         </div> -->
-                        <!-- <div class="dropdown__group ara--nav-dropdown-group">
+                    <!-- <div class="dropdown__group ara--nav-dropdown-group">
                            <div class="dropdown__icon ara--nav-dropdown-icon">
                               <i class="ri-government-line"></i>
                            </div>
@@ -167,445 +190,645 @@
                               </li>
                            </ul>
                         </div> -->
-
-                     </div>
-                    </div>
-                    <div class="dropdown-right">
-                     <div class="right__content">
-                       <div class="team__group">
-                        <h6 class="ara-fw-semi-bold">Teams</h6>
-                        <div class="group-icon">
-                           <a href="" class="icon-link">
-                              <i class="ri-customer-service-fill"></i>
-                           <span class="ara--nav-dropdown-title">Customer Support</span>
-                           </a>
-                        </div>
-                        <div class="group-icon">
-                           <a href="" class="icon-link">
-                              <i class="ri-checkbox-line"></i>
-                              <span class="ara--nav-dropdown-title">IT Support</span></a>
-                        </div>
-                        <div class="group-icon">
-                           <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                              <span class="ara--nav-dropdown-title">Human Resources</span></a>
-                        </div>
-                        <div class="group-icon">
-                           <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                              <span class="ara--nav-dropdown-title">Facilities</span></a>
-                        </div>
-                        <div class="group-icon">
-                           <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                              <span class="ara--nav-dropdown-title">Marketing</span></a>
-                        </div>
-                        <div class="group-icon">
-                           <a href="" class="icon-link"><i class="ri-building-fill"></i>
-                              <span class="ara--nav-dropdown-title">Sales</span></a>
-                        </div>
-                       </div>
-                     </div>
+                  </div>
+                </div>
+                <div class="dropdown-right">
+                  <div class="right__content">
+                    <div class="team__group">
+                      <h6 class="ara-fw-semi-bold">Teams</h6>
+                      <div class="group-icon">
+                        <a href="" class="icon-link">
+                          <i class="ri-customer-service-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Customer Support</span
+                          >
+                        </a>
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link">
+                          <i class="ri-checkbox-line"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >IT Support</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Human Resources</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Facilities</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title"
+                            >Marketing</span
+                          ></a
+                        >
+                      </div>
+                      <div class="group-icon">
+                        <a href="" class="icon-link"
+                          ><i class="ri-building-fill"></i>
+                          <span class="ara--nav-dropdown-title">Sales</span></a
+                        >
+                      </div>
                     </div>
                   </div>
-               </li>
-               <li>
-                  <a href="#" class="ara--nav-link">Customers</a>
-               </li>
-               <li>
-                  <a href="about.html" class="ara--nav-link active">About Us</a>
-               </li>
-               <li>
-                  <a href="#" class="ara--nav-link"> <i class="ri-more-line"></i> </a>
-               </li>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="ara--nav-link">Customers</a>
+            </li>
+            <li>
+              <a href="about.html" class="ara--nav-link active">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="ara--nav-link">
+                <i class="ri-more-line"></i>
+              </a>
+            </li>
 
-               <!-- Responsive button -->
-               <li class="nav__responsive-demo ara--nav-responsive-demo">
-                  <a href="#" class="nav__button ara--nav-button">Get a demo</a>
-               </li>
-            </ul>
+            <!-- Responsive button -->
+            <li class="nav__responsive-demo ara--nav-responsive-demo">
+              <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+            </li>
+          </ul>
 
-              <!-- Search Section -->
-              <div class="search-content">
-               <input type="search" id="search-box" placeholder="Search for product overviews and more...">
-               <i class="ri-close-line close-btn" id="close-btn"></i>
-               <i class="ri-search-line" id="search-2"></i>
-            </div>
-
-         </div>
-         <div class="ara--nav-content nav__desk__button ara--nav-desk-button">
-            <a href="#" class="nav__link nav-search"> <i class="ri-search-line" id="search-icon"></i> </a>
-            <a href="#" class="nav__button ara--nav-button">Get a demo</a>
-         </div>
-
-
+          <!-- Search Section -->
+          <div class="search-content">
+            <input
+              type="search"
+              id="search-box"
+              placeholder="Search for product overviews and more..."
+            />
+            <i class="ri-close-line close-btn" id="close-btn"></i>
+            <i class="ri-search-line" id="search-2"></i>
+          </div>
+        </div>
+        <div class="ara--nav-content nav__desk__button ara--nav-desk-button">
+          <a href="#" class="nav__link nav-search">
+            <i class="ri-search-line" id="search-icon"></i>
+          </a>
+          <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+        </div>
       </nav>
-   </header>
-   <!--=============== HEADER END ===============-->
+    </header>
+    <!--=============== HEADER END ===============-->
 
-   <!-- =========== HERO SECTION START ===========-->
+    <!-- =========== HERO SECTION START ===========-->
     <section class="about--hero">
       <div class="container">
-         <div class="row mx-auto g-5">
-            <div class="col-lg-6 col-12"
+        <div class="row mx-auto g-5">
+          <div
+            class="col-lg-6 col-12"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
-            data-aos-duration="1000">
-               <h2 class="ara-fw-bold">Who We are</h2>
-               <p class="pt-3 ara-line-height-1-5 text-justify">Ara Technologies, a division of Ara Discoveries Private Limited, is dedicated to delivering transformative digital solutions that power innovation, efficiency, and growth. We specialize in technology consulting, software development, AI integration, and digital transformation services, helping businesses unlock their full potential in a connected world.</p>
-            </div>
-            <div class="col-lg-6 col-12">
-            </div>
-         </div>
+            data-aos-duration="1000"
+          >
+            <h2 class="ara-fw-bold">Who We are</h2>
+            <p class="pt-3 ara-line-height-1-5 text-justify">
+              Ara Technologies, a division of Ara Discoveries Private Limited,
+              is dedicated to delivering transformative digital solutions that
+              power innovation, efficiency, and growth. We specialize in
+              technology consulting, software development, AI integration, and
+              digital transformation services, helping businesses unlock their
+              full potential in a connected world.
+            </p>
+          </div>
+          <div class="col-lg-6 col-12"></div>
+        </div>
       </div>
     </section>
-   <!-- =========== HERO SECTION END ===========-->
+    <!-- =========== HERO SECTION END ===========-->
 
-   <!-- ======== GOAL SECTION START ========== -->
+    <!-- ======== GOAL SECTION START ========== -->
     <section class="section--goal">
       <div class="container">
-         <div class="row mx-auto g-5"
-         data-aos="fade-up"
-         data-aos-duration="1000">
-            <div class="col-lg-6 col-12 text-center">
-              <div class="mission">
-               <img src="assets/img/Frame.png" class="img-fluid" width="60px" alt="">
-               <h4 class="ara-fw-semi-bold mt-3">Our Mission</h4>
-               <p class="pt-2">To empower businesses through intelligent <br>
-                  technology solutions that drive progress, <br>
-                  create seamless digital experiences, and <br>
-                  deliver measurable results.</p>
+        <div
+          class="row mx-auto g-5"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="col-lg-6 col-12 text-center">
+            <div class="mission">
+              <img
+                src="assets/img/Frame.png"
+                class="img-fluid"
+                width="60px"
+                alt=""
+              />
+              <h4 class="ara-fw-semi-bold mt-3">Our Mission</h4>
+              <p class="pt-2">
+                To empower businesses through intelligent <br />
+                technology solutions that drive progress, <br />
+                create seamless digital experiences, and <br />
+                deliver measurable results.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 text-center">
+            <div class="vision">
+              <img
+                src="assets/img/Idea.png"
+                class="img-fluid mt-3"
+                width="60px"
+                alt=""
+              />
+              <h4 class="ara-fw-semi-bold mt-3">Our Vision</h4>
+              <p class="pt-2">
+                To be a globally recognized technology <br />
+                partner known for innovation, trust, and <br />
+                excellence—enabling digital-first <br />
+                organizations of the future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== GOAL SECTION END ========== -->
+
+    <!-- ======== DO SECTION START ========== -->
+    <section class="section--do" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row mx-auto g-5">
+          <div class="col-lg-6 col-12 first">
+            <img src="assets/img/OBJECTS.png" class="img-fluid" alt="OBJECTS" />
+          </div>
+          <div class="col-lg-6 col-12">
+            <h4 class="ara-fw-semi-bold">What We Do</h4>
+            <p class="mt-3">
+              At Ara Technologies, we build smart, scalable, and secure <br />
+              solutions to solve complex business challenges. Our key <br />
+              service areas include:
+            </p>
+            <div class="mt-4">
+              <div class="d-flex gap-3">
+                <div>
+                  <i class="ri-code-s-slash-line"></i>
+                </div>
+                <div>
+                  <h6 class="ara-fw-bold">Custom Software Development</h6>
+                  <p style="font-size: 13px">
+                    Tailored systems and applications built for your unique
+                    processes and goals.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-3 mt-4">
+                <div>
+                  <img
+                    src="assets/img/Group 290.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6 class="ara-fw-bold">Mobile & Web App Development</h6>
+                  <p style="font-size: 13px">
+                    Responsive, performance-driven platforms that engage users
+                    across devices.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex gap-3 mt-4">
+                <div>
+                  <img
+                    src="assets/img/Group 291.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6 class="ara-fw-bold">UI/UX Design & Prototyping</h6>
+                  <p style="font-size: 14px">
+                    User-centric designs that are intuitive, accessible, and
+                    future-ready.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-lg-6 col-12 text-center">
-              <div class="vision">
-               <img src="assets/img/Idea.png" class="img-fluid mt-3" width="60px" alt="">
-               <h4 class="ara-fw-semi-bold mt-3">Our Vision</h4>
-               <p class="pt-2">To be a globally recognized technology <br>
-                  partner known for innovation, trust, and <br>
-                  excellence—enabling digital-first <br>
-                  organizations of the future.</p>
-              </div>
-            </div>
-         </div>
+          </div>
+        </div>
       </div>
     </section>
-   <!-- ======== GOAL SECTION END ========== -->
+    <!-- ======== DO SECTION END ========== -->
 
-   <!-- ======== DO SECTION START ========== -->
-    <section class="section--do"
-    data-aos="fade-up"
-   data-aos-duration="1000">
+    <!-- ======= CHOOSE SECTION START ======= -->
+    <section
+      class="section--choose"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container">
-         <div class="row mx-auto g-5">
-            <div class="col-lg-6 col-12 first">
-               <img src="assets/img/OBJECTS.png" class="img-fluid"  alt="OBJECTS">
+        <h4 class="text-center ara-fw-bold" style="font-size: 32px">
+          Why Choose Ara Technologies?
+        </h4>
+        <p class="text-center mt-3" style="color: #626262; line-height: 1.6">
+          Ara Technologies delivers innovative, secure, and scalable digital
+          solutions, driven by expert teams and <br />
+          acustomer-first approach—helping businesses grow and lead in the
+          digital age.
+        </p>
+        <div class="row mx-auto g-5 mt-4">
+          <div class="col-lg-3 col-md-6 col-12 text-center">
+            <div class="card">
+              <img
+                src="assets/img/Speech_Bubble.png"
+                class="img-fluid w-25"
+                style="margin-left: 80px"
+                alt="Speech_Bubble"
+              />
+              <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7">
+                Experienced <br />
+                Tech Professionals
+              </h6>
+              <p>
+                A team of engineers, <br />
+                designers, and strategists <br />
+                with diverse domain <br />
+                expertise.
+              </p>
             </div>
-            <div class="col-lg-6 col-12">
-               <h4 class="ara-fw-semi-bold">What We Do</h4>
-               <p class="mt-3">At Ara Technologies, we build smart, scalable, and secure <br>
-                  solutions to solve complex business challenges. Our key <br>
-                  service areas include:</p>
-               <div class="mt-4">
-                  <div class="d-flex gap-3">
-                     <div>
-                        <i class="ri-code-s-slash-line"></i>
-                     </div>
-                     <div>
-                        <h6 class="ara-fw-bold">Custom Software Development</h6>
-                        <p style="font-size: 13px;">Tailored systems and applications built for your unique processes and goals.</p>
-                     </div>
-                  </div>
-                  <div class="d-flex gap-3 mt-4">
-                     <div>
-                        <img src="assets/img/Group 290.png" class="img-fluid" alt="">
-                     </div>
-                     <div>
-                        <h6 class="ara-fw-bold">Mobile & Web App Development</h6>
-                        <p style="font-size: 13px;">Responsive, performance-driven platforms that engage users across devices.</p>
-                     </div>
-                  </div>
-                  <div class="d-flex gap-3 mt-4">
-                     <div>
-                        <img src="assets/img/Group 291.png" class="img-fluid" alt="">
-                     </div>
-                     <div>
-                        <h6 class="ara-fw-bold">UI/UX Design & Prototyping</h6>
-                        <p style="font-size: 14px;">User-centric designs that are intuitive, accessible, and future-ready.</p>
-                     </div>
-                  </div>
-               </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center">
+            <div class="card">
+              <img
+                src="assets/img/Puzzle.png"
+                class="img-fluid w-25 innovation"
+                style="margin-left: 70px"
+                alt="Speech_Bubble"
+              />
+              <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7">
+                Innovation- <br />
+                Driven Mindset
+              </h6>
+              <p>
+                We stay ahead of trends to deliver modern and relevant
+                solutions.
+              </p>
             </div>
-         </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center">
+            <div class="card">
+              <img
+                src="assets/img/Customer.png"
+                class="img-fluid w-25 customer"
+                style="margin-left: 70px"
+                alt="Speech_Bubble"
+              />
+              <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7">
+                Customer- <br />
+                Centric Culture
+              </h6>
+              <p>Your success is at the core of everything we do.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12 text-center">
+            <div class="card">
+              <img
+                src="assets/img/check.png"
+                class="img-fluid w-25 proven"
+                style="margin-left: 80px"
+                alt="Speech_Bubble"
+              />
+              <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7">
+                Proven <br />
+                Track Record
+              </h6>
+              <p>
+                A team of engineers, <br />
+                designers, and strategists <br />
+                with diverse domain <br />
+                expertise.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-   <!-- ======== DO SECTION END ========== -->
+    <!-- ======= CHOOSE SECTION END ======= -->
 
-   <!-- ======= CHOOSE SECTION START ======= -->
-    <section class="section--choose"
-    data-aos="fade-up"
-   data-aos-duration="1000">
-      <div class="container">
-         <h4 class="text-center ara-fw-bold" style="font-size: 32px;">Why Choose Ara Technologies?</h4>
-         <p class="text-center mt-3" style="color: #626262;line-height: 1.6;">Ara Technologies delivers innovative, secure, and scalable digital solutions, driven by expert teams and <br>
-          acustomer-first approach—helping businesses grow and lead in the digital age.</p>
-         <div class="row mx-auto g-5 mt-4">
-            <div class="col-lg-3 col-md-6 col-12 text-center">
-               <div class="card">
-                  <img src="assets/img/Speech_Bubble.png" class="img-fluid w-25" style="margin-left: 80px;" alt="Speech_Bubble">
-                  <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7;">Experienced <br>
-                  Tech Professionals</h6>
-                  <p>A team of engineers, <br> designers, and strategists <br> with diverse domain <br> expertise.</p>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 text-center">
-               <div class="card">
-                  <img src="assets/img/Puzzle.png" class="img-fluid w-25 innovation" style="margin-left: 70px;" alt="Speech_Bubble">
-                  <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7;">Innovation- <br>
-                     Driven Mindset </h6>
-                  <p>We stay ahead of trends to deliver modern and relevant solutions.</p>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 text-center">
-               <div class="card">
-                  <img src="assets/img/Customer.png" class="img-fluid w-25 customer" style="margin-left: 70px;" alt="Speech_Bubble">
-                  <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7;">Customer- <br>
-                  Centric Culture</h6>
-                  <p>Your success is at the core of everything we do.</p>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 text-center">
-               <div class="card">
-                  <img src="assets/img/check.png" class="img-fluid w-25 proven" style="margin-left: 80px;" alt="Speech_Bubble">
-                  <h6 class="mt-3 ara-fw-bold" style="line-height: 1.7;">Proven  <br>
-                   Track Record</h6>
-                  <p>A team of engineers, <br> designers, and strategists <br> with diverse domain <br> expertise.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-    </section>
-   <!-- ======= CHOOSE SECTION END ======= -->
-
-
-   <!-- ====== INDUSTRIES SECTION START -->
-    <section class="section--industries"
-    data-aos="fade-up"
-    data-aos-duration="1000">
+    <!-- ====== INDUSTRIES SECTION START -->
+    <section
+      class="section--industries"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container mt-5">
-         <h4 class="text-center ara-fw-bold">Serving Across Industries</h4>
-         <p class="mt-3 text-center" style="color: #626262;line-height: 1.7;">We understand that each sector has unique demands. That’s why our solutions are industry-specific, <br>
-          scalable, and tailored. Sectors we serve include:</p>
-          <div class="d-lg-block d-none">
-            <div class="row mt-3 g-5 justify-content-center">
-               <div class="col">
-                  <div class="card">
-                      <img src="assets/img/Health.webp" class="icon-img" alt="Healthcare">
-                      <h6>Healthcare</h6>
-                  </div>
+        <h4 class="text-center ara-fw-bold">Serving Across Industries</h4>
+        <p class="mt-3 text-center" style="color: #626262; line-height: 1.7">
+          We understand that each sector has unique demands. That’s why our
+          solutions are industry-specific, <br />
+          scalable, and tailored. Sectors we serve include:
+        </p>
+        <div class="d-lg-block d-none">
+          <div class="row mt-3 g-5 justify-content-center">
+            <div class="col">
+              <div class="card">
+                <img
+                  src="assets/img/Health.webp"
+                  class="icon-img"
+                  alt="Healthcare"
+                />
+                <h6>Healthcare</h6>
               </div>
-              <div class="col">
-                  <div class="card" style="margin-top: 4rem !important;">
-                      <img src="assets/img/Education.webp" class="icon-img" alt="Education">
-                      <h6>Education</h6>
-                  </div>
+            </div>
+            <div class="col">
+              <div class="card" style="margin-top: 4rem !important">
+                <img
+                  src="assets/img/Education.webp"
+                  class="icon-img"
+                  alt="Education"
+                />
+                <h6>Education</h6>
               </div>
-              <div class="col">
-               <div class="card">
-                   <img src="assets/img/E-Commerce.webp" class="icon-img" alt="E-Commerce">
-                   <h6>Retail & <br>
-                      E-Commerce</h6>
-               </div>
-               </div>
-               <div class="col">
-                  <div class="card" style="margin-top: 4rem !important;">
-                     <img src="assets/img/Travel.webp" class="icon-img" alt="Travel">
-                     <h6>Travel &
-                     Hospitality</h6>
-                  </div>
-               </div>
-               <div class="col">
-                  <div class="card">
-                     <img src="assets/img/Transportation.webp" class="icon-img" alt="Transportation">
-                     <h6>Transportation & Logistics</h6>
-                  </div>
-               </div>
-              <div class="col">
-               <div class="card" style="margin-top: 4rem !important;">
-                  <img src="assets/img/Estate.webp" class="icon-img" alt="Estate">
-                  <h6>RealEstate &
-                  PropTech</h6>
-               </div>
-           </div>
-         </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="assets/img/E-Commerce.webp"
+                  class="icon-img"
+                  alt="E-Commerce"
+                />
+                <h6>
+                  Retail & <br />
+                  E-Commerce
+                </h6>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="margin-top: 4rem !important">
+                <img
+                  src="assets/img/Travel.webp"
+                  class="icon-img"
+                  alt="Travel"
+                />
+                <h6>Travel & Hospitality</h6>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="assets/img/Transportation.webp"
+                  class="icon-img"
+                  alt="Transportation"
+                />
+                <h6>Transportation & Logistics</h6>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="margin-top: 4rem !important">
+                <img
+                  src="assets/img/Estate.webp"
+                  class="icon-img"
+                  alt="Estate"
+                />
+                <h6>RealEstate & PropTech</h6>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="d-lg-none d-block">
-            <div class="row mt-3 g-5 justify-content-center">
-               <div class="col-md-4 col-12">
-                  <div class="card">
-                      <img src="assets/img/Health.webp" class="icon-img" alt="Healthcare">
-                      <h6>Healthcare</h6>
-                  </div>
+        <div class="d-lg-none d-block">
+          <div class="row mt-3 g-5 justify-content-center">
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <img
+                  src="assets/img/Health.webp"
+                  class="icon-img"
+                  alt="Healthcare"
+                />
+                <h6>Healthcare</h6>
               </div>
-              <div class="col-md-4 col-12">
-                  <div class="card">
-                      <img src="assets/img/Education.webp" class="icon-img" alt="Education">
-                      <h6>Education</h6>
-                  </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <img
+                  src="assets/img/Education.webp"
+                  class="icon-img"
+                  alt="Education"
+                />
+                <h6>Education</h6>
               </div>
-              <div class="col-md-4 col-12">
-               <div class="card">
-                   <img src="assets/img/E-Commerce.webp" class="icon-img" alt="E-Commerce">
-                   <h6>Retail & <br>
-                      E-Commerce</h6>
-               </div>
-               </div>
-               <div class="col-md-4 col-12">
-                  <div class="card">
-                     <img src="assets/img/Travel.webp" class="icon-img" alt="Travel">
-                     <h6>Travel &
-                     Hospitality</h6>
-                  </div>
-               </div>
-               <div class="col-md-4 col-12">
-                  <div class="card">
-                     <img src="assets/img/Transportation.webp" class="icon-img" alt="Transportation">
-                     <h6>Transportation & Logistics</h6>
-                  </div>
-               </div>
-              <div class="col-md-4 col-12">
-               <div class="card">
-                  <img src="assets/img/Estate.webp" class="icon-img" alt="Estate">
-                  <h6>RealEstate &
-                  PropTech</h6>
-               </div>
-           </div>
-         </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <img
+                  src="assets/img/E-Commerce.webp"
+                  class="icon-img"
+                  alt="E-Commerce"
+                />
+                <h6>
+                  Retail & <br />
+                  E-Commerce
+                </h6>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <img
+                  src="assets/img/Travel.webp"
+                  class="icon-img"
+                  alt="Travel"
+                />
+                <h6>Travel & Hospitality</h6>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <img
+                  src="assets/img/Transportation.webp"
+                  class="icon-img"
+                  alt="Transportation"
+                />
+                <h6>Transportation & Logistics</h6>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="card">
+                <img
+                  src="assets/img/Estate.webp"
+                  class="icon-img"
+                  alt="Estate"
+                />
+                <h6>RealEstate & PropTech</h6>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
     </section>
-   <!-- ====== INDUSTRIES SECTION END    -->
+    <!-- ====== INDUSTRIES SECTION END    -->
 
-   <!-- ====== SECURITY SECTION START ====== -->
-    <section class="section--security"
-    data-aos="fade-up"
-    data-aos-duration="1000">
+    <!-- ====== SECURITY SECTION START ====== -->
+    <section
+      class="section--security"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container">
-         <div class="row mx-auto g-5">
-            <div class="col-lg-6 col-12">
-               <h4 class="ara-fw-bold pt-5" style="margin-top: 60px;">Security & Trust</h4>
-               <p class="pt-3" style="line-height: 1.6;">We prioritize data protection, system integrity, and <br>
-                  compliance across all our services. From GDPR to ISO standards, <br>
-                  Ara Technologies follows strict security protocols to ensure our <br>
-                  clients’ peace of mind.</p>
-            </div>
-            <div class="col-lg-6 col-12">
-               <img src="assets/img/Illustration.png" class="img-fluid" alt="Illustration">
-            </div>
-         </div>
+        <div class="row mx-auto g-5">
+          <div class="col-lg-6 col-12">
+            <h4 class="ara-fw-bold pt-5" style="margin-top: 60px">
+              Security & Trust
+            </h4>
+            <p class="pt-3" style="line-height: 1.6">
+              We prioritize data protection, system integrity, and <br />
+              compliance across all our services. From GDPR to ISO standards,
+              <br />
+              Ara Technologies follows strict security protocols to ensure our
+              <br />
+              clients’ peace of mind.
+            </p>
+          </div>
+          <div class="col-lg-6 col-12">
+            <img
+              src="assets/img/Illustration.png"
+              class="img-fluid"
+              alt="Illustration"
+            />
+          </div>
+        </div>
       </div>
     </section>
-   <!-- ====== SECURITY SECTION END ====== -->
+    <!-- ====== SECURITY SECTION END ====== -->
 
-   <!-- ===== FUTURE SECTION START ===== -->
-    <section class="section--future"
-    data-aos="fade-up"
-    data-aos-duration="1500">
+    <!-- ===== FUTURE SECTION START ===== -->
+    <section
+      class="section--future"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
       <div class="container text-center">
-         <h4 class="ara-fw-semi-bold">Let’s Build the Future Together</h4>
-         <p class="pt-4">We believe in building long-term relationships, not just products. Whether you're looking to build a new app,<br>
-             optimize operations, or innovate with AI, Ara Technologies is your trusted partner on the digital journey.</p>
+        <h4 class="ara-fw-semi-bold">Let’s Build the Future Together</h4>
+        <p class="pt-4">
+          We believe in building long-term relationships, not just products.
+          Whether you're looking to build a new app,<br />
+          optimize operations, or innovate with AI, Ara Technologies is your
+          trusted partner on the digital journey.
+        </p>
       </div>
     </section>
-   <!-- ===== FUTURE SECTION END ===== -->
+    <!-- ===== FUTURE SECTION END ===== -->
 
     <!-- ============== SECTION CONNECT START ============ -->
-    <section class="section--connect container-fluid p-5"
-    data-aos="fade-up"
-    data-aos-anchor-placement="top-bottom"
-    data-aos-duration="1000"> &nbsp;
+    <section
+      class="section--connect container-fluid p-5"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1000"
+    >
+      &nbsp;
       <div class="container text-center">
-         <h3 class="ara-fw-semi-bold pt-3">Unleash Creativity, Build Brilliance</h3>
-         <p class="pt-2">Let's get you started</p>
-         <a href="" class="btn">Connect Now</a>
+        <h3 class="ara-fw-semi-bold pt-3">
+          Unleash Creativity, Build Brilliance
+        </h3>
+        <p class="pt-2">Let's get you started</p>
+        <a href="" class="btn">Connect Now</a>
       </div>
     </section>
-     <!-- ============== SECTION CONNECT END =============== -->
+    <!-- ============== SECTION CONNECT END =============== -->
 
-
-   <!-- ============== SECTION JOURNEY START ================ -->
-   <section class="section-journey"
+    <!-- ============== SECTION JOURNEY START ================ -->
+    <section
+      class="section-journey"
       data-aos="fade-up"
-               data-aos-anchor-placement="top-bottom"
-               data-aos-duration="1000">
-         <h6 class="text-center ara-fw-semi-bold">Explore Our Journey</h6>
-         <div class="container">
-            <div class="row">
-               <div class="mt-4 d-flex flex-wrap justify-content-center text-center">
-                  <h4> <a href="" class="ara-fw-semi-bold text-dark linkedin"> LinkedIn</a> </h4>
-                  <h4> <a href="" class="ara-fw-semi-bold text-dark instagram"> Instagram</a> </h4>
-                  <h4> <a href="" class="ara-fw-semi-bold text-dark"> Youtube</a> </h4>
-                  <h4> <a href="" class="ara-fw-semi-bold text-dark dribble"> Dribble</a> </h4>
-                  <h4> <a href="" class="ara-fw-semi-bold text-dark X"> X</a> </h4>
-               </div>
-            </div>
-         </div>
-   </section>
-   <!-- ================= SECTION JOURNEY END  ===================-->
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1000"
+    >
+      <h6 class="text-center ara-fw-semi-bold">Explore Our Journey</h6>
+      <div class="container">
+        <div class="row">
+          <div class="mt-4 d-flex flex-wrap justify-content-center text-center">
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark linkedin">
+                LinkedIn</a
+              >
+            </h4>
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark instagram">
+                Instagram</a
+              >
+            </h4>
+            <h4><a href="" class="ara-fw-semi-bold text-dark"> Youtube</a></h4>
+            <h4>
+              <a href="" class="ara-fw-semi-bold text-dark dribble"> Dribble</a>
+            </h4>
+            <h4><a href="" class="ara-fw-semi-bold text-dark X"> X</a></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= SECTION JOURNEY END  ===================-->
 
+    <!-- ================ SECTION FOOTER START ============= -->
+    <section class="section-footer container-fluid p-5">
+      <div class="container p-5">
+        <div class="row mx-auto my-auto g-4 justify-content-lg-evenly">
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Products</h4>
+            <a href="">Schoolmate</a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Quick Links</h4>
+            <a href="">About Us</a> <br />
+            <a href="">Solutions</a> <br />
+            <a href="">Contact Us</a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Support</h4>
+            <a href="">Help Center</a> <br />
+            <a href="">FAQs</a> <br />
+            <a href="">User Guides</a> <br />
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Legel</h4>
+            <a href="">Privacy Policy </a> <br />
+            <a href="">Terms & Conditions</a> <br />
+          </div>
+          <div class="col-lg-2 col-md-4 col-12">
+            <h4 class="ara-fw-semi-bold">Contact Us</h4>
+            <a href="">Email</a> <br />
+            <a href="">Phone</a> <br />
+            <a href="">Address</a> <br />
+          </div>
+        </div>
+      </div>
+    </section>
 
-   <!-- ================ SECTION FOOTER START ============= -->
-      <section class="section-footer container-fluid p-5">
-         <div class="container p-5">
-            <div class="row mx-auto my-auto g-4 justify-content-lg-evenly">
-               <div class="col-lg-2 col-md-4 col-12">
-                  <h4 class="ara-fw-semi-bold">Products</h4>
-                  <a href="">Schoolmate</a>
-               </div>
-               <div class="col-lg-2 col-md-4 col-12">
-                  <h4 class="ara-fw-semi-bold">Quick Links</h4>
-                  <a href="">About Us</a> <br>
-                  <a href="">Solutions</a> <br>
-                  <a href="">Contact Us</a>
-               </div>
-               <div class="col-lg-2 col-md-4 col-12">
-                  <h4 class="ara-fw-semi-bold">Support</h4>
-                  <a href="">Help Center</a> <br>
-                  <a href="">FAQs</a> <br>
-                  <a href="">User Guides</a> <br>
-               </div>
-               <div class="col-lg-2 col-md-4 col-12">
-                  <h4 class="ara-fw-semi-bold">Legel</h4>
-                  <a href="">Privacy Policy </a> <br>
-                  <a href="">Terms & Conditions</a> <br>
-               </div>
-               <div class="col-lg-2 col-md-4 col-12">
-                  <h4 class="ara-fw-semi-bold">Contact Us</h4>
-                  <a href="">Email</a> <br>
-                  <a href="">Phone</a> <br>
-                  <a href="">Address</a> <br>
-               </div>
-            </div>
-         </div>
-      </section>
+    <!-- ========= COPYRIGHT START ======== -->
+    <div
+      class="d-flex justify-content-center align-items-center w-100 copyright"
+    >
+      <h6>
+        © 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.
+      </h6>
+    </div>
+    <!-- ========= COPYRIGHT END ======== -->
+    <!--=========== SECTION FOOTER END ============= -->
 
-   <!-- ========= COPYRIGHT START ======== -->
-   <div class="d-flex justify-content-center align-items-center w-100 copyright">
-      <h6>© 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.</h6>
-   </div>
-   <!-- ========= COPYRIGHT END ======== -->
-   <!--=========== SECTION FOOTER END ============= -->
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 
+    <!-- ============ BOOTSTRAP JS =========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-   <!--=============== MAIN JS ===============-->
-   <script src="assets/js/main.js"></script>
-
-   <!-- ============ BOOTSTRAP JS =========== -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-   <!-- ========= AOS Library =========== -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script>
+    <!-- ========= AOS Library =========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
       AOS.init();
-   </script>
-</body>
+    </script>
+  </body>
 </html>
