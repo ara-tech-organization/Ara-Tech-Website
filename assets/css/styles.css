@@ -45,7 +45,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  background-image: url("assets/img/BG\ Pattern.png");
+  background-image: url("/assets/img/BG\ Pattern.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -573,7 +573,9 @@ body::-webkit-scrollbar-thumb {
   .ara--nav-dropdown-group {
     padding-left: 1.5rem;
   }
-
+  .ara--nav{
+    height: 100vh !important;
+  }
 
 }
 
