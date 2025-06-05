@@ -63,20 +63,35 @@
       }
 
       .blue-heart,
-      .red-heart {
-        position: absolute;
-        width: 60px;
-      }
+.red-heart {
+  position: absolute;
+  width: 80px;
+  animation: float 2s ease-in-out infinite;
+}
 
-      .blue-heart {
-        top: 200px;
-        left: 250px;
-      }
+/* Positioning */
+.blue-heart {
+  top: 200px;
+  left: 250px;
+}
 
-      .red-heart {
-        bottom: 200px;
-        right: 250px;
-      }
+.red-heart {
+  bottom: 200px;
+  right: 250px;
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
 
       .title {
         font-size: 2rem;
@@ -333,19 +348,32 @@
       }
 
       .section-green-left {
+        position: relative;
         padding: 20px;
+        border-top: 2px solid #00965d;
       }
 
+/* Add fading left border using pseudo-element */
+      .section-green-left::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 2px; /* Match border thickness */
+        background: linear-gradient(to bottom, #00965d, transparent);
+        pointer-events: none;
+      }
       .section-green-left .base-image {
         width: 100%;
         height: auto;
         border-radius: 8px;
       }
 
-      .section-green-left .overlay-image {
+.section-green-left .overlay-image {
         position: absolute;
-        top: 42%; /* Adjust to fine-tune overlap */
-        left: 75%; /* Move it into the green content area */
+        top: 41%; /* Adjust to fine-tune overlap */
+        left: 68%; /* Move it into the green content area */
         width: 100%;
         max-width: 200px;
         /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
@@ -435,6 +463,7 @@
         display: flex;
         align-items: center;
         position: relative;
+        padding-left: 20px;
       }
       .arrow {
         background: #eee;
@@ -604,8 +633,12 @@
         border-radius: 12px;
         min-height: 220px;
         opacity: 1;
-        transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
       }
+      .right-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
 
       .right-content h3 span {
         color: #ff9900;
@@ -697,10 +730,18 @@
         align-items: center;
         gap: 12px;
         background: #fff9f6;
-        padding: 12px 16px;
+        padding: 10px 16px;
         border-radius: 12px;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.03);
         max-width: 240px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      }
+
+      /* 🪄 Hover Effect */
+      .value-item:hover {
+        transform: translateY(-8px);
+        background-color: #fff3ec;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       }
 
       .icon-circle {
@@ -857,7 +898,7 @@
         <div class="nav__data ara--nav-content">
           <a href="index.html" class="ara--nav-logo">
             <img
-              src="assets/img/Ara discoveries logo 1.png"
+              src="assets/img/Ara-Tech-Logo.png"
               class="img-fluid ms-3"
               alt="Ara Tech Logo"
             />
@@ -949,9 +990,9 @@
                   </li> -->
 
             <!-- Responsive button -->
-            <li class="nav__responsive-demo ara--nav-responsive-demo">
+            <!-- <li class="nav__responsive-demo ara--nav-responsive-demo">
               <a href="#" class="nav__button ara--nav-button">Get a demo</a>
-            </li>
+            </li> -->
           </ul>
 
           <!-- Search Section -->
@@ -969,7 +1010,7 @@
           <a href="#" class="nav__link nav-search">
             <i class="ri-search-line" id="search-icon"></i>
           </a>
-          <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+          <!-- <a href="#" class="nav__button ara--nav-button">Get a demo</a> -->
         </div>
       </nav>
     </header>
@@ -1398,6 +1439,7 @@
             <img src="assets/img/Global.webp" alt="" />
           </div>
           <div
+          style="margin: 0;"
             class="col-lg-6 col-12 order-1 order-lg-2"
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -1436,9 +1478,9 @@
               delivering cutting-edge digital solutions that streamline
               operations, enhance experiences, and drive growth.
             </p>
-            <a href="" class="service-link pt-4"
+            <!-- <a href="" class="service-link pt-4"
               >Learn More <i class="ri-arrow-right-line ms-2"></i>
-            </a>
+            </a> -->
           </div>
 
           <div class="col-lg-6 col-12">
@@ -1922,7 +1964,7 @@
     <!-- ========= SECTION FAQ START -->
     <section class="searchable-section" id="faq" data-aos="fade-up" data-aos-duration="1000">
       <h3 class="text-center ara-fw-semi-bold">Frequently asked questions</h3>
-      <div class="container mt-5">
+      <div style="background-color: #F7F7F7; border-radius: 50px;" class="container mt-5">
         <!-- 1 FAQ -->
         <div class="faq-item active">
           <div class="faq-question d-flex align-items-center">
@@ -2084,7 +2126,7 @@
           Unleash Creativity, Build Brilliance
         </h3>
         <p class="pt-2">Let's get you started</p>
-        <a href="" class="btn">Connect Now</a>
+        <a href="" class="btn">Contact Now</a>
       </div>
     </section>
     <!-- ============== SECTION CONNECT END =============== -->
@@ -2302,56 +2344,63 @@ closeBtn.addEventListener("click", function () {
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const contents = [
-          {
-            title: "Ensure cohesion",
-            text: "Creating a unified, seamless experience where every element works together effortlessly for maximum efficiency and impact.",
-          },
-          {
-            title: "Maintain authority",
-            text: "Maintain authority by projecting confidence, setting clear expectations, and leading with consistency — ensuring every decision reinforces trust, respect, and control across every touchpoint.",
-          },
-          {
-            title: "Deliver rapid outcomes",
-            text: "Deliver rapid outcomes by streamlining processes, eliminating delays, and executing with precision — ensuring swift, impactful results that drive progress and exceed expectations.",
-          },
-        ];
+  document.addEventListener("DOMContentLoaded", function () {
+    const contents = [
+      {
+        title: "Ensure cohesion",
+        text: "Creating a unified, seamless experience where every element works together effortlessly for maximum efficiency and impact.",
+      },
+      {
+        title: "Maintain authority",
+        text: "Maintain authority by projecting confidence, setting clear expectations, and leading with consistency — ensuring every decision reinforces trust, respect, and control across every touchpoint.",
+      },
+      {
+        title: "Deliver rapid outcomes",
+        text: "Deliver rapid outcomes by streamlining processes, eliminating delays, and executing with precision — ensuring swift, impactful results that drive progress and exceed expectations.",
+      },
+    ];
 
-        let currentIndex = 0;
+    let currentIndex = 0;
 
-        function switchContent(direction) {
-          const contentBox = document.getElementById("rightContent");
+    function switchContent(direction) {
+      const contentBox = document.getElementById("rightContent");
 
-          contentBox.style.opacity = 0;
+      contentBox.style.opacity = 0;
 
-          setTimeout(() => {
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = contents.length - 1;
-            if (currentIndex >= contents.length) currentIndex = 0;
+      setTimeout(() => {
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = contents.length - 1;
+        if (currentIndex >= contents.length) currentIndex = 0;
 
-            // Determine color class
-            let colorClass = "";
-            if (currentIndex === 1) colorClass = "red";
-            else if (currentIndex === 2) colorClass = "green";
+        // Determine color class
+        let colorClass = "";
+        if (currentIndex === 1) colorClass = "red";
+        else if (currentIndex === 2) colorClass = "green";
 
-            contentBox.innerHTML = `
-      <h3><span class="${colorClass}">${contents[currentIndex].title}</span></h3>
-      <p>${contents[currentIndex].text}</p>
-    `;
+        contentBox.innerHTML = `
+          <h3><span class="${colorClass}">${contents[currentIndex].title}</span></h3>
+          <p>${contents[currentIndex].text}</p>
+        `;
 
-            contentBox.style.opacity = 1;
-          }, 400);
-        }
+        contentBox.style.opacity = 1;
+      }, 400);
+    }
 
-        document
-          .getElementById("prevBtn")
-          .addEventListener("click", () => switchContent(-1));
-        document
-          .getElementById("nextBtn")
-          .addEventListener("click", () => switchContent(1));
-      });
-    </script>
+    document
+      .getElementById("prevBtn")
+      .addEventListener("click", () => switchContent(-1));
+    document
+      .getElementById("nextBtn")
+      .addEventListener("click", () => switchContent(1));
+
+    // 🔥 Auto-switch every 5 seconds
+    setInterval(() => switchContent(1), 5000);
+
+    // 🚀 Initialize with the first content
+    switchContent(0);
+  });
+</script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

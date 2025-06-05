@@ -44,6 +44,11 @@
         padding: 10rem 20px;
         text-align: center;
         margin-top: 100px;
+        background: linear-gradient(
+          90deg,
+          rgba(155, 0, 3, 0) 0%,
+          rgba(255, 0, 0, 0.02) 100%
+        );
       }
 
       /* .container {
@@ -55,7 +60,7 @@
         font-weight: bold;
         line-height: 1.4;
         margin-bottom: 20px;
-        font-size: 2rem;
+        font-size: 3.5rem;
       }
 
       .structure {
@@ -71,7 +76,7 @@
       }
 
       .description {
-        font-size: 1rem;
+        font-size: 1.4rem;
         max-width: 800px;
         margin: 0 auto;
         color: #555;
@@ -109,12 +114,6 @@
       @media (min-width: 1200px) and (max-width: 1399.98px) {
         .headline {
           font-size: 2.5rem;
-        }
-      }
-
-      @media (min-width: 1400px) {
-        .headline {
-          font-size: 2.75rem;
         }
       }
 
@@ -162,6 +161,7 @@
         position: relative;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         text-align: left;
+        border: 1px solid #00000024;
       }
 
       .card-content {
@@ -238,7 +238,7 @@
         background: #000;
         color: #fff;
         padding: 5px 12px;
-        border-radius: 12px;
+        border-radius: 50px;
         font-size: 0.9rem;
         z-index: 3;
       }
@@ -315,6 +315,9 @@
 
       .what-we-do-content {
         flex: 1 1 500px;
+        background-color: #ffffff;
+        padding: 30px 30px;
+        border-radius: 20px;
       }
 
       .what-we-do-content h2 {
@@ -372,7 +375,7 @@
         }
 
         .what-we-do-image {
-          flex: 1 1 280px;
+          flex: 1 1 180px;
         }
       }
 
@@ -422,10 +425,12 @@
 
       /* -------------------------------Technology Starts -------------------------- */
 
-      .tech-stack-section {
+    .tech-stack-section {
         background-color: #f7f9fc;
-        padding: 60px 5%;
+        padding: 60px 10%;
         text-align: center;
+        overflow: hidden;
+        position: relative;
       }
 
       .section-title {
@@ -434,73 +439,64 @@
         margin-bottom: 40px;
       }
 
+      .tech-carousel-wrapper {
+        overflow: hidden;
+        width: 100%;
+      }
+
       .tech-icons {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
+        width: max-content;
+        animation: scroll-left 20s linear infinite;
+        align-items: center;
+      }
+
+      .tech-item {
+        flex: 0 0 auto;
+        margin: 0 50px;
       }
 
       .tech-item img {
-        height: 100px;
+        height: 120px;
         max-width: 100%;
         object-fit: contain;
       }
 
-      /* Extra small: < 576px */
-      @media (max-width: 575.98px) {
-        .tech-item {
-          flex: 0 1 40%;
+      /* Scroll animation */
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
         }
-        .tech-item img {
-          height: 60px;
+        100% {
+          transform: translateX(-50%);
         }
       }
 
-      /* Small: 576px - 767.98px */
-      @media (min-width: 576px) and (max-width: 767.98px) {
-        .tech-item {
-          flex: 0 1 30%;
+      /* Responsive image sizes */
+      @media (max-width: 575.98px) {
+        .tech-item img {
+          height: 85px;
         }
+
+        .tech-item{
+          margin: 0 25px !important;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
         .tech-item img {
           height: 70px;
         }
       }
-
-      /* Medium: 768px - 991.98px */
       @media (min-width: 768px) and (max-width: 991.98px) {
-        .tech-item {
-          flex: 0 1 25%;
-        }
         .tech-item img {
           height: 80px;
         }
       }
-
-      /* Large: 992px - 1199.98px */
       @media (min-width: 992px) and (max-width: 1199.98px) {
-        .tech-item {
-          flex: 0 1 20%;
-        }
         .tech-item img {
           height: 90px;
         }
       }
-
-      /* XL: 1200px - 1399.98px */
-      @media (min-width: 1200px) and (max-width: 1399.98px) {
-        .tech-item {
-          flex: 0 1 16%;
-        }
-      }
-
-      /* XXL: ≥ 1400px */
-      @media (min-width: 1400px) {
-        .tech-item {
-          flex: 0 1 14%;
-        }
-      }
-
       /* -------------------------------Technology Ends ---------------------------- */
     </style>
   </head>
@@ -511,7 +507,7 @@
         <div class="nav__data ara--nav-content">
           <a href="index.html" class="ara--nav-logo">
             <img
-              src="assets/img/Ara discoveries logo 1.png"
+              src="assets/img/Ara-Tech-Logo.png"
               class="img-fluid ms-3"
               alt="Ara Tech Logo"
             />
@@ -610,9 +606,9 @@
                   </li> -->
 
             <!-- Responsive button -->
-            <li class="nav__responsive-demo ara--nav-responsive-demo">
+            <!-- <li class="nav__responsive-demo ara--nav-responsive-demo">
               <a href="#" class="nav__button ara--nav-button">Get a demo</a>
-            </li>
+            </li> -->
           </ul>
 
           <!-- Search Section -->
@@ -630,7 +626,7 @@
           <a href="#" class="nav__link nav-search">
             <i class="ri-search-line" id="search-icon"></i>
           </a>
-          <a href="#" class="nav__button ara--nav-button">Get a demo</a>
+          <!-- <a href="#" class="nav__button ara--nav-button">Get a demo</a> -->
         </div>
       </nav>
     </header>
@@ -874,24 +870,47 @@
       data-aos-duration="1500"
     >
       <h2 class="section-title">Technology Stack</h2>
-      <div class="tech-icons">
-        <div class="tech-item">
-          <img src="assets/img/tech-1.png" alt="React" />
-        </div>
-        <div class="tech-item">
-          <img src="assets/img/tech-2.png" alt="MySQL" />
-        </div>
-        <div class="tech-item">
-          <img src="assets/img/tech-3.png" alt="Firebase" />
-        </div>
-        <div class="tech-item">
-          <img src="assets/img/tech-6.png" alt="GitHub" />
-        </div>
-        <div class="tech-item">
-          <img src="assets/img/tech-4.png" alt="Flutter" />
-        </div>
-        <div class="tech-item">
-          <img src="assets/img/tech-5.png" alt="Figma" />
+      <div class="tech-carousel-wrapper">
+        <div class="tech-icons">
+          <!-- Original Logos -->
+          <div class="tech-item">
+            <img src="assets/img/tech-1.png" alt="React" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-2.png" alt="MySQL" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-3.png" alt="Firebase" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-6.png" alt="GitHub" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-4.png" alt="Flutter" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-5.png" alt="Figma" />
+          </div>
+
+          <!-- Duplicate Logos -->
+          <div class="tech-item">
+            <img src="assets/img/tech-1.png" alt="React" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-2.png" alt="MySQL" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-3.png" alt="Firebase" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-6.png" alt="GitHub" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-4.png" alt="Flutter" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/img/tech-5.png" alt="Figma" />
+          </div>
         </div>
       </div>
     </section>
@@ -909,7 +928,7 @@
           Unleash Creativity, Build Brilliance
         </h3>
         <p class="pt-2">Let's get you started</p>
-        <a href="" class="btn">Connect Now</a>
+        <a href="" class="btn">Contact Now</a>
       </div>
     </section>
     <!-- ============== SECTION CONNECT END =============== -->
