@@ -425,12 +425,12 @@
 
       /* -------------------------------Technology Starts -------------------------- */
 
-    .tech-stack-section {
+    /* -------------------------------Technology Starts -------------------------- */
+
+      .tech-stack-section {
         background-color: #f7f9fc;
-        padding: 60px 10%;
+        padding: 60px 5%;
         text-align: center;
-        overflow: hidden;
-        position: relative;
       }
 
       .section-title {
@@ -439,65 +439,87 @@
         margin-bottom: 40px;
       }
 
-      .tech-carousel-wrapper {
-        overflow: hidden;
-        width: 100%;
-      }
-
       .tech-icons {
         display: flex;
-        width: max-content;
-        animation: scroll-left 20s linear infinite;
-        align-items: center;
-      }
-
-      .tech-item {
-        flex: 0 0 auto;
-        margin: 0 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
       }
 
       .tech-item img {
-        height: 120px;
+        height: 100px;
         max-width: 100%;
         object-fit: contain;
+        animation: floatPulse 4s ease-in-out infinite;
+        transition: transform 0.3s ease;
       }
 
-      /* Scroll animation */
-      @keyframes scroll-left {
+      @keyframes floatPulse {
         0% {
-          transform: translateX(0);
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-8px) scale(1.05);
         }
         100% {
-          transform: translateX(-50%);
+          transform: translateY(0px) scale(1);
         }
       }
 
-      /* Responsive image sizes */
+      /* Extra small: < 576px */
       @media (max-width: 575.98px) {
-        .tech-item img {
-          height: 85px;
+        .tech-item {
+          flex: 0 1 40%;
         }
-
-        .tech-item{
-          margin: 0 25px !important;
+        .tech-item img {
+          height: 60px;
         }
       }
+
+      /* Small: 576px - 767.98px */
       @media (min-width: 576px) and (max-width: 767.98px) {
+        .tech-item {
+          flex: 0 1 30%;
+        }
         .tech-item img {
           height: 70px;
         }
       }
+
+      /* Medium: 768px - 991.98px */
       @media (min-width: 768px) and (max-width: 991.98px) {
+        .tech-item {
+          flex: 0 1 25%;
+        }
         .tech-item img {
           height: 80px;
         }
       }
+
+      /* Large: 992px - 1199.98px */
       @media (min-width: 992px) and (max-width: 1199.98px) {
+        .tech-item {
+          flex: 0 1 20%;
+        }
         .tech-item img {
           height: 90px;
         }
       }
-      /* -------------------------------Technology Ends ---------------------------- */
+
+      /* XL: 1200px - 1399.98px */
+      @media (min-width: 1200px) and (max-width: 1399.98px) {
+        .tech-item {
+          flex: 0 1 16%;
+        }
+      }
+
+      /* XXL: ≥ 1400px */
+      @media (min-width: 1400px) {
+        .tech-item {
+          flex: 0 1 14%;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -864,57 +886,33 @@
 
     <!-- ======================Container Ends ====================================== -->
     <!--  =========================Technology Starts ================================ -->
-    <section
+   <section
       class="tech-stack-section"
       data-aos="fade-up"
       data-aos-duration="1500"
     >
       <h2 class="section-title">Technology Stack</h2>
-      <div class="tech-carousel-wrapper">
-        <div class="tech-icons">
-          <!-- Original Logos -->
-          <div class="tech-item">
-            <img src="assets/img/tech-1.png" alt="React" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-2.png" alt="MySQL" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-3.png" alt="Firebase" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-6.png" alt="GitHub" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-4.png" alt="Flutter" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-5.png" alt="Figma" />
-          </div>
-
-          <!-- Duplicate Logos -->
-          <div class="tech-item">
-            <img src="assets/img/tech-1.png" alt="React" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-2.png" alt="MySQL" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-3.png" alt="Firebase" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-6.png" alt="GitHub" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-4.png" alt="Flutter" />
-          </div>
-          <div class="tech-item">
-            <img src="assets/img/tech-5.png" alt="Figma" />
-          </div>
+      <div class="tech-icons">
+        <div class="tech-item">
+          <img src="assets/img/tech-1.png" alt="React" />
+        </div>
+        <div class="tech-item">
+          <img src="assets/img/tech-2.png" alt="MySQL" />
+        </div>
+        <div class="tech-item">
+          <img src="assets/img/tech-3.png" alt="Firebase" />
+        </div>
+        <div class="tech-item">
+          <img src="assets/img/tech-6.png" alt="GitHub" />
+        </div>
+        <div class="tech-item">
+          <img src="assets/img/tech-4.png" alt="Flutter" />
+        </div>
+        <div class="tech-item">
+          <img src="assets/img/tech-5.png" alt="Figma" />
         </div>
       </div>
     </section>
-
     <!-- ============================Technology Ends ================================= -->
     <!-- ============== SECTION CONNECT START ============ -->
     <section
