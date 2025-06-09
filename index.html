@@ -55,17 +55,13 @@
         padding: 12% 20px;
         position: relative;
         margin-top: 90px;
-        background: linear-gradient(
-          90deg,
-          rgba(155, 0, 3, 0.02) 0%,
-          rgba(255, 0, 0, 0.02) 100%
-        );
+        background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
       }
 
       .blue-heart,
 .red-heart {
   position: absolute;
-  width: 80px;
+  width: 100px;
   animation: float 2s ease-in-out infinite;
 }
 
@@ -94,7 +90,7 @@
 }
 
       .title {
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-weight: bold;
         background: linear-gradient(90deg, #9b0003 0%, #ff0000 100%);
         -webkit-background-clip: text;
@@ -105,7 +101,7 @@
       }
 
       .description {
-        font-size: 1rem;
+        font-size: 1.2rem;
         max-width: 700px;
         color: #555;
         margin-bottom: 30px;
@@ -114,31 +110,33 @@
 
       .form-container {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
         max-width: 400px;
         width: 100%;
       }
 
-      .form-container input {
+      /* .form-container input {
         flex: 1;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 4px 0 0 4px;
         outline: none;
-      }
+      } */
 
       .form-container button {
-        padding: 12px 20px;
-        background-color: #e3342f;
+        padding: 5px 20px;
+      background: linear-gradient(90deg, #9B0003 0%, #FF0000 100%);
         color: #fff;
         border: none;
-        border-radius: 0 4px 4px 0;
+        border-radius:50px;
         cursor: pointer;
         transition: background 0.3s ease;
       }
 
       .form-container button:hover {
-        background-color: #cc1f1a;
+        background: linear-gradient(90deg, #9B0003 0%, #FF0000 100%);
       }
 
       /* Responsive Breakpoints */
@@ -506,10 +504,15 @@
         scroll-snap-align: start; /* Each card snaps to start */
       }
 
-      .carousel-card:nth-child(2),
-      .carousel-card:nth-child(3) {
+      .carousel-card:nth-child(2)
+      {
         background: #ea2c0008;
         border: 1px solid #ea2c00;
+      }
+
+      .carousel-card:nth-child(3) {
+        background: #E248000D;
+        border: 1px solid #E24800;
       }
 
       .carousel-card:nth-child(4) {
@@ -822,6 +825,7 @@
       /* Wrapper styling */
       .right-content {
         position: relative;
+        margin-top: 0 !important;
       }
 
       .video-overlay-play-button {
@@ -965,7 +969,7 @@
               <span class="arrow-icon">→</span>
             </div>
             <div class="solution-description">
-              SchoolMate is a smart platform for easy school management and parent communication.
+              SchoolMate is a smart platform for <br> easy school management and <br> parent communication.
             </div>
           </div>
         </a>
@@ -1036,8 +1040,7 @@
       </div>
 
       <div class="form-container" data-aos="fade-up" data-aos-duration="1500">
-        <input type="email" placeholder="Enter Your Work Email" />
-        <button>Get a Demo</button>
+        <button>Talk to us Now</button>
       </div>
     </section>
 
@@ -1113,11 +1116,11 @@
           >
             <div data-aos="fade-up" data-aos-duration="1500">
               <h3 class="ara-fw-bold ara-line-height-1-5 ms-4">
-                Design. Code. Conquer – <br />
-                Apps & Software that <br />
-                Redefine Possibilities
+                Design. Code. Conquer<br />
               </h3>
-              <p class="section--green__right__para ara-line-height-1-5 p-4">
+              <p class="ara-fw-bold ara-line-height-1-5 ms-4">Apps & Software that
+                Redefine Possibilities</p>
+              <p class="section--green__right__para p-4">
                 We don’t just build software—we craft <br />
                 exceptional digital experiences. From intuitive <br />
                 UI/UX design to scalable software solutions, we <br />
@@ -1148,7 +1151,7 @@
             <img src="assets/img/icon-1.png" alt="Icon" class="card-icon" />
             <h3>Mobile & Web App Development</h3>
             <p>
-              Crafting seamless digital experiences across Android, iOS, and web
+              Crafting seamless digital experiences across Android, iOS, and <br> web
               platforms.
             </p>
           </div>
@@ -1172,14 +1175,14 @@
             <img src="assets/img/icon-4.png" alt="Icon" class="card-icon" />
             <h3>Custom Software Development</h3>
             <p>
-              Tailored applications that solve real-world business challenges.
+              Tailored applications that solve <br> real-world business <br> challenges.
             </p>
           </div>
           <div class="carousel-card">
             <img src="assets/img/icon-5.png" alt="Icon" class="card-icon" />
             <h3>Custom Websites Development</h3>
             <p>
-              Custom websites built to match your brand and solve real business
+              Custom websites built to match <br> your brand and solve real <br> business
               needs.
             </p>
           </div>
@@ -1213,7 +1216,8 @@
         </div>
       </div>
 
-      <div class="right-content" id="rightContent">
+      <div class="right-content" id="rightContent"  data-aos="fade-right"
+      data-aos-duration="1500">
         <h3><span>Ensure cohesion</span></h3>
         <p>
           Creating a unified, seamless experience where every element works
@@ -1964,7 +1968,7 @@
     <!-- ========= SECTION FAQ START -->
     <section class="searchable-section" id="faq" data-aos="fade-up" data-aos-duration="1000">
       <h3 class="text-center ara-fw-semi-bold">Frequently asked questions</h3>
-      <div style="background-color: #F7F7F7; border-radius: 50px;" class="container mt-5">
+      <div style="background-color: #F7F7F7; border-radius: 50px;" class="container mt-5 py-5">
         <!-- 1 FAQ -->
         <div class="faq-item active">
           <div class="faq-question d-flex align-items-center">

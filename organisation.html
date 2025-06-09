@@ -40,15 +40,15 @@
     <!-- ================ AOS Library ===================  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
+      body {
+        background-color: #fdfbf8;
+      }
+
       .info-section {
         padding: 10rem 20px;
         text-align: center;
-        margin-top: 100px;
-        background: linear-gradient(
-          90deg,
-          rgba(155, 0, 3, 0) 0%,
-          rgba(255, 0, 0, 0.02) 100%
-        );
+        margin-top: 90px;
+         background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
       }
 
       /* .container {
@@ -60,7 +60,7 @@
         font-weight: bold;
         line-height: 1.4;
         margin-bottom: 20px;
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
 
       .structure {
@@ -76,16 +76,52 @@
       }
 
       .description {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         max-width: 800px;
         margin: 0 auto;
         color: #555;
+      }
+
+      .blue-heart,
+      .red-heart {
+        position: absolute;
+        width: 100px;
+        animation: float 2s ease-in-out infinite;
+      }
+
+      /* Positioning */
+      .blue-heart {
+        top: 180px;
+        left: 200px;
+      }
+
+      .red-heart {
+        bottom: 120px;
+        right: 200px;
+      }
+
+      /* Animation keyframes */
+      @keyframes float {
+        0% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-10px) scale(1.05);
+        }
+        100% {
+          transform: translateY(0px) scale(1);
+        }
       }
 
       /* Responsive Typography and Layout */
       @media (max-width: 575.98px) {
         .headline {
           font-size: 1.5rem;
+        }
+
+         .blue-heart,
+        .red-heart {
+          display: none;
         }
 
         .description {
@@ -97,11 +133,35 @@
         .headline {
           font-size: 1.8rem;
         }
+
+         .blue-heart {
+          left: 20px;
+          width: 45px;
+          top: 100px;
+        }
+
+        .red-heart {
+          right: 20px;
+          width: 45px;
+          bottom: 100px;
+        }
       }
 
       @media (min-width: 768px) and (max-width: 991.98px) {
         .headline {
           font-size: 2rem;
+        }
+
+        .blue-heart {
+          top: 120px;
+          left: 70px;
+          width: 50px;
+        }
+
+        .red-heart {
+          bottom: 100px;
+          right: 70px;
+          width: 50px;
         }
       }
 
@@ -109,11 +169,35 @@
         .headline {
           font-size: 2.2rem;
         }
+
+         .blue-heart {
+          top: 150px;
+          left: 180px;
+          width: 50px;
+        }
+
+        .red-heart {
+          bottom: 100px;
+          right: 100px;
+          width: 50px;
+        }
       }
 
       @media (min-width: 1200px) and (max-width: 1399.98px) {
         .headline {
           font-size: 2.5rem;
+        }
+
+         .blue-heart {
+          top: 150px;
+          left: 250px;
+          width: 50px;
+        }
+
+        .red-heart {
+          bottom: 150px;
+          right: 250px;
+          width: 50px;
         }
       }
 
@@ -425,8 +509,6 @@
 
       /* -------------------------------Technology Starts -------------------------- */
 
-    /* -------------------------------Technology Starts -------------------------- */
-
       .tech-stack-section {
         background-color: #f7f9fc;
         padding: 60px 5%;
@@ -450,19 +532,19 @@
         height: 100px;
         max-width: 100%;
         object-fit: contain;
-        animation: floatPulse 4s ease-in-out infinite;
+        animation: floatOnly 4s ease-in-out infinite;
         transition: transform 0.3s ease;
       }
 
-      @keyframes floatPulse {
+      @keyframes floatOnly {
         0% {
-          transform: translateY(0px) scale(1);
+          transform: translateY(0px);
         }
         50% {
-          transform: translateY(-8px) scale(1.05);
+          transform: translateY(-10px); /* Only vertical float */
         }
         100% {
-          transform: translateY(0px) scale(1);
+          transform: translateY(0px);
         }
       }
 
@@ -519,7 +601,6 @@
           flex: 0 1 14%;
         }
       }
-      
     </style>
   </head>
   <body>
@@ -547,11 +628,7 @@
               <i class="ri-search-line icon-search" id="icon-search"></i>
             </a>
             <div class="box-2">
-              <input
-                type="search"
-                id="search-input"
-                placeholder="Search..."
-              />
+              <input type="search" id="search-input" placeholder="Search..." />
               <i class="ri-close-line" id="close"></i>
               <i class="ri-search-line" id="icon-2"></i>
               <ul id="search-results" class="search-results-list"></ul>
@@ -601,8 +678,8 @@
                           <span class="arrow-icon">→</span>
                         </div>
                         <div class="solution-description">
-                          SchoolMate is a smart platform for easy school
-                          management and parent communication.
+                          SchoolMate is a smart platform for <br> easy school
+                          management and <br> parent communication.
                         </div>
                       </div>
                     </a>
@@ -635,11 +712,7 @@
 
           <!-- Search Section -->
           <div class="search-content">
-            <input
-              type="search"
-              id="search-box"
-              placeholder="Search..."
-            />
+            <input type="search" id="search-box" placeholder="Search..." />
             <i class="ri-close-line close-btn" id="close-btn"></i>
             <i class="ri-search-line" id="search-2"></i>
           </div>
@@ -656,7 +729,14 @@
 
     <!-- ========= Hero Starts =============== -->
 
-    <section class="info-section">
+    <section class="info-section" data-aos="fade-up" data-aos-duration="1500">
+      <img
+        src="assets/img/blue-heart.png"
+        alt="Blue Heart"
+        class="blue-heart"
+      />
+      <img src="assets/img/red-heart.png" alt="Red Heart" class="red-heart" />
+
       <div class="container">
         <h1 class="headline">
           <span class="structure">Our Structure.</span><br />
@@ -886,7 +966,7 @@
 
     <!-- ======================Container Ends ====================================== -->
     <!--  =========================Technology Starts ================================ -->
-   <section
+    <section
       class="tech-stack-section"
       data-aos="fade-up"
       data-aos-duration="1500"
